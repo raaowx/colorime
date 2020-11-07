@@ -10,6 +10,18 @@
 		5947CAC0255311B60043B474 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5947CAC4255311B60043B474 /* Localizable.strings */; };
 		5947CAC1255311B60043B474 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5947CAC4255311B60043B474 /* Localizable.strings */; };
 		5947CAC2255311B60043B474 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5947CAC4255311B60043B474 /* Localizable.strings */; };
+		59A4FBA02556D0000062F589 /* Orbitron Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */; };
+		59A4FBA12556D0000062F589 /* Orbitron Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */; };
+		59A4FBA22556D0000062F589 /* Orbitron Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */; };
+		59A4FBA32556D0000062F589 /* Orbitron Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9D2556D0000062F589 /* Orbitron Bold.ttf */; };
+		59A4FBA42556D0000062F589 /* Orbitron Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9D2556D0000062F589 /* Orbitron Bold.ttf */; };
+		59A4FBA52556D0000062F589 /* Orbitron Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9D2556D0000062F589 /* Orbitron Bold.ttf */; };
+		59A4FBA62556D0000062F589 /* Orbitron Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9E2556D0000062F589 /* Orbitron Light.ttf */; };
+		59A4FBA72556D0000062F589 /* Orbitron Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9E2556D0000062F589 /* Orbitron Light.ttf */; };
+		59A4FBA82556D0000062F589 /* Orbitron Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9E2556D0000062F589 /* Orbitron Light.ttf */; };
+		59A4FBA92556D0000062F589 /* Orbitron Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9F2556D0000062F589 /* Orbitron Black.ttf */; };
+		59A4FBAA2556D0000062F589 /* Orbitron Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9F2556D0000062F589 /* Orbitron Black.ttf */; };
+		59A4FBAB2556D0000062F589 /* Orbitron Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9F2556D0000062F589 /* Orbitron Black.ttf */; };
 		59D0BE00253E9E0B00597572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BDFF253E9E0B00597572 /* AppDelegate.swift */; };
 		59D0BE02253E9E0B00597572 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BE01253E9E0B00597572 /* SceneDelegate.swift */; };
 		59D0BE04253E9E0B00597572 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BE03253E9E0B00597572 /* ViewController.swift */; };
@@ -42,6 +54,10 @@
 		5947CAB5255310CD0043B474 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5947CAC3255311B60043B474 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5947CAC8255311BA0043B474 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron Medium.ttf"; sourceTree = "<group>"; };
+		59A4FB9D2556D0000062F589 /* Orbitron Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron Bold.ttf"; sourceTree = "<group>"; };
+		59A4FB9E2556D0000062F589 /* Orbitron Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron Light.ttf"; sourceTree = "<group>"; };
+		59A4FB9F2556D0000062F589 /* Orbitron Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron Black.ttf"; sourceTree = "<group>"; };
 		59D0BDFC253E9E0B00597572 /* colorime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colorime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59D0BDFF253E9E0B00597572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59D0BE01253E9E0B00597572 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +121,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		59A4FB882556CF3C0062F589 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				59A4FB9F2556D0000062F589 /* Orbitron Black.ttf */,
+				59A4FB9D2556D0000062F589 /* Orbitron Bold.ttf */,
+				59A4FB9E2556D0000062F589 /* Orbitron Light.ttf */,
+				59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		59D0BDF3253E9E0B00597572 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +160,7 @@
 				59D0BE05253E9E0B00597572 /* Main.storyboard */,
 				5947CAC4255311B60043B474 /* Localizable.strings */,
 				59D0BE08253E9E0D00597572 /* Assets.xcassets */,
+				59A4FB882556CF3C0062F589 /* Fonts */,
 				59D0BDFF253E9E0B00597572 /* AppDelegate.swift */,
 				59D0BE01253E9E0B00597572 /* SceneDelegate.swift */,
 				5991408625531AE1008D9B6D /* View */,
@@ -267,8 +295,12 @@
 			files = (
 				59D0BE0C253E9E0D00597572 /* LaunchScreen.storyboard in Resources */,
 				5947CAC0255311B60043B474 /* Localizable.strings in Resources */,
+				59A4FBA92556D0000062F589 /* Orbitron Black.ttf in Resources */,
+				59A4FBA02556D0000062F589 /* Orbitron Medium.ttf in Resources */,
+				59A4FBA62556D0000062F589 /* Orbitron Light.ttf in Resources */,
 				59D0BE09253E9E0D00597572 /* Assets.xcassets in Resources */,
 				59D0BE07253E9E0B00597572 /* Main.storyboard in Resources */,
+				59A4FBA32556D0000062F589 /* Orbitron Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +309,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5947CAC1255311B60043B474 /* Localizable.strings in Resources */,
+				59A4FBA72556D0000062F589 /* Orbitron Light.ttf in Resources */,
+				59A4FBA12556D0000062F589 /* Orbitron Medium.ttf in Resources */,
+				59A4FBA42556D0000062F589 /* Orbitron Bold.ttf in Resources */,
+				59A4FBAA2556D0000062F589 /* Orbitron Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +321,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5947CAC2255311B60043B474 /* Localizable.strings in Resources */,
+				59A4FBA82556D0000062F589 /* Orbitron Light.ttf in Resources */,
+				59A4FBA22556D0000062F589 /* Orbitron Medium.ttf in Resources */,
+				59A4FBA52556D0000062F589 /* Orbitron Bold.ttf in Resources */,
+				59A4FBAB2556D0000062F589 /* Orbitron Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
