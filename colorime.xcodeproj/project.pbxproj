@@ -22,6 +22,12 @@
 		59A4FBA92556D0000062F589 /* Orbitron Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9F2556D0000062F589 /* Orbitron Black.ttf */; };
 		59A4FBAA2556D0000062F589 /* Orbitron Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9F2556D0000062F589 /* Orbitron Black.ttf */; };
 		59A4FBAB2556D0000062F589 /* Orbitron Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9F2556D0000062F589 /* Orbitron Black.ttf */; };
+		59A4FBBD255995BD0062F589 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBBC255995BD0062F589 /* Date.swift */; };
+		59A4FBBE255995BD0062F589 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBBC255995BD0062F589 /* Date.swift */; };
+		59A4FBBF255995BD0062F589 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBBC255995BD0062F589 /* Date.swift */; };
+		59A4FBC7255997B60062F589 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBC6255997B60062F589 /* UIColor.swift */; };
+		59A4FBC8255997B60062F589 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBC6255997B60062F589 /* UIColor.swift */; };
+		59A4FBC9255997B60062F589 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBC6255997B60062F589 /* UIColor.swift */; };
 		59D0BE00253E9E0B00597572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BDFF253E9E0B00597572 /* AppDelegate.swift */; };
 		59D0BE02253E9E0B00597572 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BE01253E9E0B00597572 /* SceneDelegate.swift */; };
 		59D0BE04253E9E0B00597572 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BE03253E9E0B00597572 /* ViewController.swift */; };
@@ -58,6 +64,8 @@
 		59A4FB9D2556D0000062F589 /* Orbitron Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron Bold.ttf"; sourceTree = "<group>"; };
 		59A4FB9E2556D0000062F589 /* Orbitron Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron Light.ttf"; sourceTree = "<group>"; };
 		59A4FB9F2556D0000062F589 /* Orbitron Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron Black.ttf"; sourceTree = "<group>"; };
+		59A4FBBC255995BD0062F589 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		59A4FBC6255997B60062F589 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		59D0BDFC253E9E0B00597572 /* colorime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colorime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59D0BDFF253E9E0B00597572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59D0BE01253E9E0B00597572 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,26 +107,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5991408425531AC6008D9B6D /* Model */ = {
+		5991408425531AC6008D9B6D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		5991408525531ACE008D9B6D /* Presenter */ = {
+		5991408525531ACE008D9B6D /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Presenter;
+			path = Presenters;
 			sourceTree = "<group>";
 		};
-		5991408625531AE1008D9B6D /* View */ = {
+		5991408625531AE1008D9B6D /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				59D0BE03253E9E0B00597572 /* ViewController.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		59A4FB882556CF3C0062F589 /* Fonts */ = {
@@ -130,6 +138,15 @@
 				59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		59A4FBB5255995860062F589 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				59A4FBBC255995BD0062F589 /* Date.swift */,
+				59A4FBC6255997B60062F589 /* UIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		59D0BDF3253E9E0B00597572 = {
@@ -163,9 +180,10 @@
 				59A4FB882556CF3C0062F589 /* Fonts */,
 				59D0BDFF253E9E0B00597572 /* AppDelegate.swift */,
 				59D0BE01253E9E0B00597572 /* SceneDelegate.swift */,
-				5991408625531AE1008D9B6D /* View */,
-				5991408525531ACE008D9B6D /* Presenter */,
-				5991408425531AC6008D9B6D /* Model */,
+				59A4FBB5255995860062F589 /* Extensions */,
+				5991408625531AE1008D9B6D /* Views */,
+				5991408525531ACE008D9B6D /* Presenters */,
+				5991408425531AC6008D9B6D /* Models */,
 			);
 			path = colorime;
 			sourceTree = "<group>";
@@ -358,6 +376,8 @@
 				59D0BE04253E9E0B00597572 /* ViewController.swift in Sources */,
 				59D0BE00253E9E0B00597572 /* AppDelegate.swift in Sources */,
 				59D0BE02253E9E0B00597572 /* SceneDelegate.swift in Sources */,
+				59A4FBBD255995BD0062F589 /* Date.swift in Sources */,
+				59A4FBC7255997B60062F589 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +386,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				59D0BE17253E9E0D00597572 /* colorimeTests.swift in Sources */,
+				59A4FBC8255997B60062F589 /* UIColor.swift in Sources */,
+				59A4FBBE255995BD0062F589 /* Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +396,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				59D0BE22253E9E0D00597572 /* colorimeUITests.swift in Sources */,
+				59A4FBC9255997B60062F589 /* UIColor.swift in Sources */,
+				59A4FBBF255995BD0062F589 /* Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
