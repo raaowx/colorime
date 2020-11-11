@@ -28,6 +28,9 @@
 		59A4FBC7255997B60062F589 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBC6255997B60062F589 /* UIColor.swift */; };
 		59A4FBC8255997B60062F589 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBC6255997B60062F589 /* UIColor.swift */; };
 		59A4FBC9255997B60062F589 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBC6255997B60062F589 /* UIColor.swift */; };
+		59A4FBD4255C4C240062F589 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBD3255C4C240062F589 /* Settings.swift */; };
+		59A4FBD5255C4C240062F589 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBD3255C4C240062F589 /* Settings.swift */; };
+		59A4FBD6255C4C240062F589 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBD3255C4C240062F589 /* Settings.swift */; };
 		59D0BE00253E9E0B00597572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BDFF253E9E0B00597572 /* AppDelegate.swift */; };
 		59D0BE02253E9E0B00597572 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BE01253E9E0B00597572 /* SceneDelegate.swift */; };
 		59D0BE04253E9E0B00597572 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BE03253E9E0B00597572 /* ViewController.swift */; };
@@ -66,6 +69,7 @@
 		59A4FB9F2556D0000062F589 /* Orbitron Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron Black.ttf"; sourceTree = "<group>"; };
 		59A4FBBC255995BD0062F589 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		59A4FBC6255997B60062F589 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		59A4FBD3255C4C240062F589 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		59D0BDFC253E9E0B00597572 /* colorime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colorime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59D0BDFF253E9E0B00597572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59D0BE01253E9E0B00597572 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 		5991408425531AC6008D9B6D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				59A4FBD3255C4C240062F589 /* Settings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59A4FBD4255C4C240062F589 /* Settings.swift in Sources */,
 				59D0BE04253E9E0B00597572 /* ViewController.swift in Sources */,
 				59D0BE00253E9E0B00597572 /* AppDelegate.swift in Sources */,
 				59D0BE02253E9E0B00597572 /* SceneDelegate.swift in Sources */,
@@ -387,6 +393,7 @@
 			files = (
 				59D0BE17253E9E0D00597572 /* colorimeTests.swift in Sources */,
 				59A4FBC8255997B60062F589 /* UIColor.swift in Sources */,
+				59A4FBD5255C4C240062F589 /* Settings.swift in Sources */,
 				59A4FBBE255995BD0062F589 /* Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +404,7 @@
 			files = (
 				59D0BE22253E9E0D00597572 /* colorimeUITests.swift in Sources */,
 				59A4FBC9255997B60062F589 /* UIColor.swift in Sources */,
+				59A4FBD6255C4C240062F589 /* Settings.swift in Sources */,
 				59A4FBBF255995BD0062F589 /* Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
