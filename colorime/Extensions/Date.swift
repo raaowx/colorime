@@ -10,7 +10,7 @@ import Foundation
 extension Date {
   func toDateString() -> String {
     let formatter = DateFormatter()
-    formatter.dateFormat = "DD/MM/YY"
+    formatter.dateFormat = "dd/MM/yy"
     return formatter.string(from: self)
   }
 
@@ -22,7 +22,7 @@ extension Date {
 
   func toDateHex() -> String {
     let formatter = DateFormatter()
-    formatter.dateFormat = "DDMMYY"
+    formatter.dateFormat = "ddMMyy"
     return "#\(formatter.string(from: self))"
   }
 
