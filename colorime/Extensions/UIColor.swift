@@ -9,7 +9,7 @@ import UIKit
 
 extension UIColor {
   convenience init?(hex: String) {
-    if !hex.hasPrefix("#"), ![4, 5, 7, 9].contains(hex.count) {
+    if !hex.hasPrefix("#") || ![4, 5, 7, 9].contains(hex.count) {
       return nil
     }
 
