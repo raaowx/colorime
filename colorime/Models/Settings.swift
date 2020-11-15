@@ -12,9 +12,8 @@ struct Settings {
   private let defaults: UserDefaults
 
   enum Options: String {
-    case showTime = "colorime-time-show"
-    case hexTime = "colorime-time-hex"
     case showDate = "colorime-date-show"
+    case hexTime = "colorime-time-hex"
     case hexDate = "colorime-date-hex"
     case keepScreenActive = "colorime-screen-keepactive"
   }
@@ -24,12 +23,7 @@ struct Settings {
   }
 
   func read(option: Options) -> Bool {
-    switch option {
-    case .showTime:
-      return true
-    default:
-      return defaults.bool(forKey: option.rawValue)
-    }
+    defaults.bool(forKey: option.rawValue)
   }
 
   func write(option: Options, withValue value: Bool) {
