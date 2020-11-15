@@ -10,6 +10,7 @@
 		5947CAC0255311B60043B474 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5947CAC4255311B60043B474 /* Localizable.strings */; };
 		5947CAC1255311B60043B474 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5947CAC4255311B60043B474 /* Localizable.strings */; };
 		5947CAC2255311B60043B474 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5947CAC4255311B60043B474 /* Localizable.strings */; };
+		594CC441255FF8BB00027EA1 /* ClockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594CC440255FF8BB00027EA1 /* ClockPresenter.swift */; };
 		59A4FBA02556D0000062F589 /* Orbitron Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */; };
 		59A4FBA12556D0000062F589 /* Orbitron Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */; };
 		59A4FBA22556D0000062F589 /* Orbitron Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */; };
@@ -33,7 +34,7 @@
 		59A4FBD6255C4C240062F589 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A4FBD3255C4C240062F589 /* Settings.swift */; };
 		59D0BE00253E9E0B00597572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BDFF253E9E0B00597572 /* AppDelegate.swift */; };
 		59D0BE02253E9E0B00597572 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BE01253E9E0B00597572 /* SceneDelegate.swift */; };
-		59D0BE04253E9E0B00597572 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BE03253E9E0B00597572 /* ViewController.swift */; };
+		59D0BE04253E9E0B00597572 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0BE03253E9E0B00597572 /* ClockViewController.swift */; };
 		59D0BE07253E9E0B00597572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D0BE05253E9E0B00597572 /* Main.storyboard */; };
 		59D0BE09253E9E0D00597572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59D0BE08253E9E0D00597572 /* Assets.xcassets */; };
 		59D0BE0C253E9E0D00597572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D0BE0A253E9E0D00597572 /* LaunchScreen.storyboard */; };
@@ -63,6 +64,7 @@
 		5947CAB5255310CD0043B474 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5947CAC3255311B60043B474 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5947CAC8255311BA0043B474 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		594CC440255FF8BB00027EA1 /* ClockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockPresenter.swift; sourceTree = "<group>"; };
 		59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron Medium.ttf"; sourceTree = "<group>"; };
 		59A4FB9D2556D0000062F589 /* Orbitron Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron Bold.ttf"; sourceTree = "<group>"; };
 		59A4FB9E2556D0000062F589 /* Orbitron Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron Light.ttf"; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 		59D0BDFC253E9E0B00597572 /* colorime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colorime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59D0BDFF253E9E0B00597572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59D0BE01253E9E0B00597572 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		59D0BE03253E9E0B00597572 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59D0BE03253E9E0B00597572 /* ClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
 		59D0BE06253E9E0B00597572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59D0BE08253E9E0D00597572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59D0BE0B253E9E0D00597572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		5991408525531ACE008D9B6D /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				594CC440255FF8BB00027EA1 /* ClockPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -129,7 +132,7 @@
 		5991408625531AE1008D9B6D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				59D0BE03253E9E0B00597572 /* ViewController.swift */,
+				59D0BE03253E9E0B00597572 /* ClockViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -379,11 +382,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				59A4FBD4255C4C240062F589 /* Settings.swift in Sources */,
-				59D0BE04253E9E0B00597572 /* ViewController.swift in Sources */,
+				59D0BE04253E9E0B00597572 /* ClockViewController.swift in Sources */,
 				59D0BE00253E9E0B00597572 /* AppDelegate.swift in Sources */,
 				59D0BE02253E9E0B00597572 /* SceneDelegate.swift in Sources */,
 				59A4FBBD255995BD0062F589 /* Date.swift in Sources */,
 				59A4FBC7255997B60062F589 /* UIColor.swift in Sources */,
+				594CC441255FF8BB00027EA1 /* ClockPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
