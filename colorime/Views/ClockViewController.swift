@@ -20,6 +20,7 @@ class ClockViewController: UIViewController {
       self.setNeedsStatusBarAppearanceUpdate()
     }
   }
+  var showingStatusBar = false
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -38,14 +39,18 @@ class ClockViewController: UIViewController {
   }
 
   @IBAction func screenTapped(_ sender: Any) {
-    UIView.animate(withDuration: 0.5) {
-      self.settingsB.isHidden.toggle()
-      self.hideStatusBar = false
-    } completion: { _ in
-      Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
-        UIView.animate(withDuration: 0.5) {
-          self.settingsB.isHidden.toggle()
-          self.hideStatusBar = true
+    if !showingStatusBar {
+      showingStatusBar.toggle()
+      UIView.animate(withDuration: 0.5) {
+        self.settingsB.isHidden.toggle()
+        self.hideStatusBar.toggle()
+      } completion: { _ in
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+          UIView.animate(withDuration: 0.5) {
+            self.settingsB.isHidden.toggle()
+            self.hideStatusBar.toggle()
+            self.showingStatusBar.toggle()
+          }
         }
       }
     }
