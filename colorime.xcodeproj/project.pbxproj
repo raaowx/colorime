@@ -231,10 +231,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59D0BE26253E9E0D00597572 /* Build configuration list for PBXNativeTarget "colorime" */;
 			buildPhases = (
+				5947C9F3255306EF0043B474 /* ShellScript */,
 				59D0BDF8253E9E0B00597572 /* Sources */,
 				59D0BDF9253E9E0B00597572 /* Frameworks */,
 				59D0BDFA253E9E0B00597572 /* Resources */,
-				5947C9F3255306EF0043B474 /* ShellScript */,
 			);
 			buildRules = (
 			);

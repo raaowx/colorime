@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ClockViewController.swift
 //  colorime
 //
 //  Created by raaowx on 20/10/2020.
@@ -14,29 +14,28 @@ class ClockViewController: UIViewController {
   @IBOutlet weak var timeL: UILabel!
   @IBOutlet weak var settingsB: UIButton!
   override var prefersStatusBarHidden: Bool { return hideStatusBar }
-  let presenter = ClockPresenter()
+  var presenter: ClockPresenter?
+  var statusBarTimer: Timer?
   var hideStatusBar = true {
     didSet {
       self.setNeedsStatusBarAppearanceUpdate()
     }
   }
   var showingStatusBar = false
-  var statusBarTimer: Timer?
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    presenter.attachView(delegate: self)
-    presenter.configureView()
+    presenter = ClockPresenter(delegate: self)
   }
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    presenter.startClock()
+    presenter?.startClock()
   }
 
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    presenter.stopClock()
+    presenter?.stopClock()
   }
 
   @IBAction func screenTapped(_ sender: Any) {
@@ -66,8 +65,8 @@ class ClockViewController: UIViewController {
   }
 
   @IBAction func unwindToClock(_ unwindSegue: UIStoryboardSegue) {
-    presenter.configureView()
-    presenter.startClock()
+    presenter?.configureView()
+    presenter?.startClock()
   }
 }
 

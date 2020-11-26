@@ -10,14 +10,9 @@ class ClockPresenter {
   private weak var delegate: ClockDelegate?
   private var timer: Timer?
 
-  init() { }
-
-  func attachView(delegate: ClockDelegate) {
+  init(delegate: ClockDelegate) {
     self.delegate = delegate
-  }
-
-  func dettachView() {
-    delegate = nil
+    configureView()
   }
 
   func configureView() {
@@ -28,6 +23,9 @@ class ClockPresenter {
   }
 
   func startClock() {
+    if let timer = timer, timer.isValid {
+      return
+    }
     var closures: [(_ delegate: ClockDelegate, _ date: Date) -> Void] = []
     let settings = Settings.shared
 
@@ -76,10 +74,8 @@ class ClockPresenter {
 }
 
 protocol ClockDelegate: class {
-  // MARK: UI Configuration
   func toggleShowDate(_ show: Bool)
   func toggleScreenActive(_ keepActive: Bool)
-  // MARK: Update UI
   func setSolidBackground(color: String)
   func setGradientBackground(from start: String, to end: String)
   func setTime(time: String)
