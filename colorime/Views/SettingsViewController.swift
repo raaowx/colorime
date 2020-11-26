@@ -66,10 +66,17 @@ class SettingsViewController: UIViewController {
 // MARK: - Settings Delegate
 extension SettingsViewController: SettingsDelegate {
   func showContainer(option: Settings.Options) {
-    switch option {
-    case .hexDate:
-      dateHexFormatSV.isHidden.toggle()
-    default: return
+    UIView.animate(withDuration: 0.5) { [self] in
+      switch option {
+      case .hexDate:
+        if dateHexFormatSV.isHidden {
+          dateHexFormatSV.alpha = 1
+        } else {
+          dateHexFormatSV.alpha = 0
+        }
+        dateHexFormatSV.isHidden.toggle()
+      default: return
+      }
     }
   }
 

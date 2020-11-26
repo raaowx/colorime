@@ -41,12 +41,12 @@ class ClockViewController: UIViewController {
   @IBAction func screenTapped(_ sender: Any) {
     if !showingStatusBar {
       showingStatusBar.toggle()
-      UIView.animate(withDuration: 0.5) {
+      UIView.animate(withDuration: 0.3) {
         self.settingsB.isHidden.toggle()
         self.hideStatusBar.toggle()
       } completion: { _ in
         self.statusBarTimer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
-          UIView.animate(withDuration: 0.5) {
+          UIView.animate(withDuration: 0.3) {
             self.settingsB.isHidden.toggle()
             self.hideStatusBar.toggle()
             self.showingStatusBar.toggle()
