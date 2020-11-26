@@ -7,12 +7,18 @@
 
 import UIKit
 
+// MARK: - Settings View Controller
 class SettingsViewController: UIViewController {
   @IBOutlet weak var timeHexFormatV: UIView!
+  @IBOutlet weak var timeHexS: UISwitch!
   @IBOutlet weak var dateShowV: UIView!
+  @IBOutlet weak var dateShowS: UISwitch!
   @IBOutlet weak var dateHexFormatSV: UIStackView!
   @IBOutlet weak var dateHexFormatV: UIView!
+  @IBOutlet weak var dateHexFormatS: UISwitch!
   @IBOutlet weak var screenKeepActiveV: UIView!
+  @IBOutlet weak var screenKeepActiveS: UISwitch!
+  var presenter: SettingsPresenter?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,10 +36,53 @@ class SettingsViewController: UIViewController {
       screenKeepActiveV.layer.borderWidth = 1
       screenKeepActiveV.layer.borderColor = borderColor
     }
+    timeHexS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
+    dateShowS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
+    dateHexFormatS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
+    screenKeepActiveS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
+    presenter = SettingsPresenter(delegate: self)
+  }
+
+  @objc func switchValueChanged(which: UISwitch) {
+    switch which {
+    case timeHexS:
+      presenter?.updateSetting(option: .hexTime, value: which.isOn)
+    case dateShowS:
+      presenter?.updateSetting(option: .showDate, value: which.isOn)
+    case dateHexFormatS:
+      presenter?.updateSetting(option: .hexDate, value: which.isOn)
+    case screenKeepActiveS:
+      presenter?.updateSetting(option: .keepScreenActive, value: which.isOn)
+    default: return
+    }
   }
 
   // MARK: Navigation: Segue & UnwindSegue
-  @IBAction func unwindToClock(_ sender: Any) {
+  @IBAction func segueBackToClock(_ sender: Any) {
     self.performSegue(withIdentifier: "unwindClock", sender: nil)
+  }
+}
+
+// MARK: - Settings Delegate
+extension SettingsViewController: SettingsDelegate {
+  func showContainer(option: Settings.Options) {
+    switch option {
+    case .hexDate:
+      dateHexFormatSV.isHidden.toggle()
+    default: return
+    }
+  }
+
+  func loadSettings(option: Settings.Options, value: Bool) {
+    switch option {
+    case .hexTime:
+      timeHexS.setOn(value, animated: true)
+    case .showDate:
+      dateShowS.setOn(value, animated: true)
+    case .hexDate:
+      dateHexFormatS.setOn(value, animated: true)
+    case .keepScreenActive:
+      screenKeepActiveS.setOn(value, animated: true)
+    }
   }
 }

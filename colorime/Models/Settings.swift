@@ -11,9 +11,9 @@ struct Settings {
   static var shared = Settings()
   private let defaults: UserDefaults
 
-  enum Options: String {
-    case showDate = "colorime-date-show"
+  enum Options: String, CaseIterable {
     case hexTime = "colorime-time-hex"
+    case showDate = "colorime-date-show"
     case hexDate = "colorime-date-hex"
     case keepScreenActive = "colorime-screen-keepactive"
   }
