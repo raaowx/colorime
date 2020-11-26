@@ -13,6 +13,7 @@ class ClockViewController: UIViewController {
   @IBOutlet weak var dateL: UILabel!
   @IBOutlet weak var timeL: UILabel!
   @IBOutlet weak var settingsB: UIButton!
+  override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
   override var prefersStatusBarHidden: Bool { return hideStatusBar }
   var presenter: ClockPresenter?
   var statusBarTimer: Timer?
