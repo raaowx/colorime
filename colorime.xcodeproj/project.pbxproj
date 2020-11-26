@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59220EBA2566E5A800F1C665 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EB92566E5A800F1C665 /* SettingsViewController.swift */; };
+		59220EBB2566E5A900F1C665 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EB92566E5A800F1C665 /* SettingsViewController.swift */; };
+		59220EBC2566E5A900F1C665 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EB92566E5A800F1C665 /* SettingsViewController.swift */; };
+		59220EC12566E5C300F1C665 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EC02566E5C300F1C665 /* SettingsPresenter.swift */; };
+		59220EC22566E5C300F1C665 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EC02566E5C300F1C665 /* SettingsPresenter.swift */; };
+		59220EC32566E5C300F1C665 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EC02566E5C300F1C665 /* SettingsPresenter.swift */; };
 		5947CAC0255311B60043B474 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5947CAC4255311B60043B474 /* Localizable.strings */; };
 		5947CAC1255311B60043B474 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5947CAC4255311B60043B474 /* Localizable.strings */; };
 		5947CAC2255311B60043B474 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5947CAC4255311B60043B474 /* Localizable.strings */; };
@@ -60,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59220EB92566E5A800F1C665 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		59220EC02566E5C300F1C665 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		5947CAB4255310CD0043B474 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		5947CAB5255310CD0043B474 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5947CAC3255311B60043B474 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				594CC440255FF8BB00027EA1 /* ClockPresenter.swift */,
+				59220EC02566E5C300F1C665 /* SettingsPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -133,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				59D0BE03253E9E0B00597572 /* ClockViewController.swift */,
+				59220EB92566E5A800F1C665 /* SettingsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -386,8 +396,10 @@
 				59D0BE00253E9E0B00597572 /* AppDelegate.swift in Sources */,
 				59D0BE02253E9E0B00597572 /* SceneDelegate.swift in Sources */,
 				59A4FBBD255995BD0062F589 /* Date.swift in Sources */,
+				59220EC12566E5C300F1C665 /* SettingsPresenter.swift in Sources */,
 				59A4FBC7255997B60062F589 /* UIColor.swift in Sources */,
 				594CC441255FF8BB00027EA1 /* ClockPresenter.swift in Sources */,
+				59220EBA2566E5A800F1C665 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,7 +410,9 @@
 				59D0BE17253E9E0D00597572 /* colorimeTests.swift in Sources */,
 				59A4FBC8255997B60062F589 /* UIColor.swift in Sources */,
 				59A4FBD5255C4C240062F589 /* Settings.swift in Sources */,
+				59220EBB2566E5A900F1C665 /* SettingsViewController.swift in Sources */,
 				59A4FBBE255995BD0062F589 /* Date.swift in Sources */,
+				59220EC22566E5C300F1C665 /* SettingsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +423,9 @@
 				59D0BE22253E9E0D00597572 /* colorimeUITests.swift in Sources */,
 				59A4FBC9255997B60062F589 /* UIColor.swift in Sources */,
 				59A4FBD6255C4C240062F589 /* Settings.swift in Sources */,
+				59220EBC2566E5A900F1C665 /* SettingsViewController.swift in Sources */,
 				59A4FBBF255995BD0062F589 /* Date.swift in Sources */,
+				59220EC32566E5C300F1C665 /* SettingsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

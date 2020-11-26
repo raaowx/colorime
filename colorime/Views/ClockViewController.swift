@@ -21,6 +21,7 @@ class ClockViewController: UIViewController {
     }
   }
   var showingStatusBar = false
+  var statusBarTimer: Timer?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -45,7 +46,7 @@ class ClockViewController: UIViewController {
         self.settingsB.isHidden.toggle()
         self.hideStatusBar.toggle()
       } completion: { _ in
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+        self.statusBarTimer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
           UIView.animate(withDuration: 0.5) {
             self.settingsB.isHidden.toggle()
             self.hideStatusBar.toggle()
@@ -56,8 +57,17 @@ class ClockViewController: UIViewController {
     }
   }
 
+  // MARK: Navigation: Segue & UnwindSegue
   @IBAction func segueToSettings(_ sender: Any) {
-    // TODO: Segue to settings
+    if let timer = statusBarTimer, timer.isValid {
+      timer.fire()
+    }
+    self.performSegue(withIdentifier: "segueSettings", sender: nil)
+  }
+
+  @IBAction func unwindToClock(_ unwindSegue: UIStoryboardSegue) {
+    presenter.configureView()
+    presenter.startClock()
   }
 }
 
