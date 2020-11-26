@@ -34,6 +34,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ibB-EF-yIl" appends="YES" id="3eQ-f7-uJQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="4IS-jx-jUE" appends="YES" id="u0g-9e-5NJ"/>
                                 </connections>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYJ-Mj-SuM">
@@ -98,6 +99,11 @@
                         <action selector="screenTapped:" destination="BYZ-38-t0r" id="3vo-6x-ntE"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="4IS-jx-jUE">
+                    <connections>
+                        <action selector="segueToSettings:" destination="BYZ-38-t0r" id="aFM-EO-kNb"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="132" y="100"/>
         </scene>
@@ -125,26 +131,26 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alf-e2-5aJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="416"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="luE-cP-HtL">
-                                                <rect key="frame" x="32" y="32" width="311" height="112"/>
+                                                <rect key="frame" x="32" y="32" width="311" height="122"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYp-LZ-i2A">
-                                                        <rect key="frame" x="2" y="0.0" width="307" height="18"/>
-                                                        <fontDescription key="fontDescription" name="Orbitron-Bold" family="Orbitron" pointSize="18"/>
+                                                        <rect key="frame" x="2" y="0.0" width="307" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Orbitron-Bold" family="Orbitron" pointSize="20"/>
                                                         <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yr9-bc-s5g">
-                                                        <rect key="frame" x="0.0" y="30" width="311" height="82"/>
+                                                        <rect key="frame" x="0.0" y="32" width="311" height="90"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbi-We-xxz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hex format" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2p-Qb-4QS">
-                                                                        <rect key="frame" x="12" y="17" width="226" height="16"/>
-                                                                        <fontDescription key="fontDescription" name="Orbitron-Medium" family="Orbitron" pointSize="16"/>
+                                                                        <rect key="frame" x="12" y="16" width="226" height="18"/>
+                                                                        <fontDescription key="fontDescription" name="Orbitron-Medium" family="Orbitron" pointSize="18"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -162,16 +168,65 @@
                                                                     <constraint firstItem="sac-t3-QaW" firstAttribute="centerY" secondItem="bbi-We-xxz" secondAttribute="centerY" id="vte-0F-pDa"/>
                                                                 </constraints>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time in main screen will be shown as #123456 instead of 12:34:56" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reV-Eh-g6k">
-                                                                <rect key="frame" x="50" y="62" width="211" height="20"/>
-                                                                <fontDescription key="fontDescription" name="Orbitron-Light" family="Orbitron" pointSize="10"/>
-                                                                <color key="textColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reV-Eh-g6k">
+                                                                <rect key="frame" x="24" y="62" width="263" height="28"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Time in main screen will be shown as">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="14" name="Orbitron-Light"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="12" name="Orbitron-Light"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="#123456">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="14" name="Orbitron-Bold"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="12" name="Orbitron-Light"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="instead of">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="14" name="Orbitron-Light"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="12" name="Orbitron-Light"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="12:34:56">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="14" name="Orbitron-Bold"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="bbi-We-xxz" firstAttribute="leading" secondItem="yr9-bc-s5g" secondAttribute="leading" id="bpj-Ah-N0J"/>
-                                                            <constraint firstItem="reV-Eh-g6k" firstAttribute="leading" secondItem="yr9-bc-s5g" secondAttribute="leading" constant="50" id="rQ6-Wo-6QW"/>
+                                                            <constraint firstItem="reV-Eh-g6k" firstAttribute="leading" secondItem="yr9-bc-s5g" secondAttribute="leading" constant="24" id="rQ6-Wo-6QW"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
@@ -181,20 +236,20 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-RD-gwK">
-                                                <rect key="frame" x="32" y="184" width="311" height="80"/>
+                                                <rect key="frame" x="32" y="194" width="311" height="82"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efk-F9-3j7">
-                                                        <rect key="frame" x="2" y="0.0" width="307" height="18"/>
-                                                        <fontDescription key="fontDescription" name="Orbitron-Bold" family="Orbitron" pointSize="18"/>
+                                                        <rect key="frame" x="2" y="0.0" width="307" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Orbitron-Bold" family="Orbitron" pointSize="20"/>
                                                         <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7g-c1-TM8">
-                                                        <rect key="frame" x="0.0" y="30" width="311" height="50"/>
+                                                        <rect key="frame" x="0.0" y="32" width="311" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOE-QT-P0H">
-                                                                <rect key="frame" x="12" y="17" width="226" height="16"/>
-                                                                <fontDescription key="fontDescription" name="Orbitron-Medium" family="Orbitron" pointSize="16"/>
+                                                                <rect key="frame" x="12" y="16" width="226" height="18"/>
+                                                                <fontDescription key="fontDescription" name="Orbitron-Medium" family="Orbitron" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -213,14 +268,14 @@
                                                         </constraints>
                                                     </view>
                                                     <stackView hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="SAM-w8-gft">
-                                                        <rect key="frame" x="0.0" y="80" width="311" height="62"/>
+                                                        <rect key="frame" x="0.0" y="82" width="311" height="62"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mme-A0-U99">
                                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hex format" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0l-Sa-O7F">
-                                                                        <rect key="frame" x="12" y="17" width="226" height="16"/>
-                                                                        <fontDescription key="fontDescription" name="Orbitron-Medium" family="Orbitron" pointSize="16"/>
+                                                                        <rect key="frame" x="12" y="16" width="226" height="18"/>
+                                                                        <fontDescription key="fontDescription" name="Orbitron-Medium" family="Orbitron" pointSize="18"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -238,16 +293,65 @@
                                                                     <constraint firstItem="Obb-3W-0do" firstAttribute="centerY" secondItem="mme-A0-U99" secondAttribute="centerY" id="h6a-ee-q6o"/>
                                                                 </constraints>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date in main screen will be shown as #150720 instead of 15/07/20" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrj-7v-1Qu">
-                                                                <rect key="frame" x="50" y="62" width="211" height="0.0"/>
-                                                                <fontDescription key="fontDescription" name="Orbitron-Light" family="Orbitron" pointSize="10"/>
-                                                                <color key="textColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrj-7v-1Qu">
+                                                                <rect key="frame" x="24" y="62" width="263" height="0.0"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Date in main screen will be shown as">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="14" name="Orbitron-Light"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="12" name="Orbitron-Light"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="#150720">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="14" name="Orbitron-Bold"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="12" name="Orbitron-Light"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="instead of">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="14" name="Orbitron-Light"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="12" name="Orbitron-Light"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="15/07/20">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <font key="NSFont" size="14" name="Orbitron-Bold"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="mme-A0-U99" firstAttribute="leading" secondItem="SAM-w8-gft" secondAttribute="leading" id="NJk-ZU-s7c"/>
-                                                            <constraint firstItem="Yrj-7v-1Qu" firstAttribute="leading" secondItem="SAM-w8-gft" secondAttribute="leading" constant="50" id="vhe-OQ-Ntu"/>
+                                                            <constraint firstItem="Yrj-7v-1Qu" firstAttribute="leading" secondItem="SAM-w8-gft" secondAttribute="leading" constant="24" id="vhe-OQ-Ntu"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
@@ -258,20 +362,20 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="w8R-C1-YQH">
-                                                <rect key="frame" x="32" y="304" width="311" height="80"/>
+                                                <rect key="frame" x="32" y="316" width="311" height="82"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3L2-qf-p36">
-                                                        <rect key="frame" x="2" y="0.0" width="307" height="18"/>
-                                                        <fontDescription key="fontDescription" name="Orbitron-Bold" family="Orbitron" pointSize="18"/>
+                                                        <rect key="frame" x="2" y="0.0" width="307" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Orbitron-Bold" family="Orbitron" pointSize="20"/>
                                                         <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnm-H3-F6o">
-                                                        <rect key="frame" x="0.0" y="30" width="311" height="50"/>
+                                                        <rect key="frame" x="0.0" y="32" width="311" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-79-Nqk">
-                                                                <rect key="frame" x="12" y="17" width="226" height="16"/>
-                                                                <fontDescription key="fontDescription" name="Orbitron-Medium" family="Orbitron" pointSize="16"/>
+                                                                <rect key="frame" x="12" y="16" width="226" height="18"/>
+                                                                <fontDescription key="fontDescription" name="Orbitron-Medium" family="Orbitron" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -297,6 +401,7 @@
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="luE-cP-HtL" firstAttribute="centerX" secondItem="alf-e2-5aJ" secondAttribute="centerX" id="2T4-Zd-yR8"/>
                                             <constraint firstAttribute="bottom" secondItem="w8R-C1-YQH" secondAttribute="bottom" constant="32" id="8rj-0o-ud6"/>
@@ -309,6 +414,9 @@
                                             <constraint firstItem="w8R-C1-YQH" firstAttribute="centerX" secondItem="alf-e2-5aJ" secondAttribute="centerX" id="r9p-0J-yZK"/>
                                             <constraint firstItem="w8R-C1-YQH" firstAttribute="top" secondItem="gQx-RD-gwK" secondAttribute="bottom" constant="40" id="wU6-HJ-prM"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="kw2-IY-RFc" appends="YES" id="XSk-cD-cE0"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -349,6 +457,11 @@
                 </viewController>
                 <exit id="9xt-G8-ucZ" userLabel="Exit" sceneMemberID="exit"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6V-X9-9cn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="kw2-IY-RFc">
+                    <connections>
+                        <action selector="segueBackToClock:" destination="ZNa-kC-iN4" id="ZUI-Ms-kJd"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1068.2242990654206" y="99.784017278617711"/>
         </scene>
