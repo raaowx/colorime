@@ -69,6 +69,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="a0e-Gu-Hke" appends="YES" id="6IE-At-5dk"/>
+                                </connections>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -102,6 +106,11 @@
                 <swipeGestureRecognizer direction="left" id="4IS-jx-jUE">
                     <connections>
                         <action selector="segueToSettings:" destination="BYZ-38-t0r" id="aFM-EO-kNb"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="a0e-Gu-Hke">
+                    <connections>
+                        <action selector="segueToSettings:" destination="BYZ-38-t0r" id="SXR-OW-ZOz"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -419,6 +428,7 @@
                                         </connections>
                                     </view>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="alf-e2-5aJ" firstAttribute="bottom" secondItem="Dvb-Hk-aBG" secondAttribute="bottom" id="7rI-U1-EK0"/>
                                     <constraint firstItem="alf-e2-5aJ" firstAttribute="leading" secondItem="Dvb-Hk-aBG" secondAttribute="leading" id="fh6-0o-SKr"/>
@@ -428,6 +438,9 @@
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="DgU-Bu-Xs8"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="MLQ-3Y-Z5q"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yXd-jS-4Dr" appends="YES" id="cla-8s-CDv"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Hcy-6r-PeC"/>
@@ -460,6 +473,11 @@
                 <swipeGestureRecognizer direction="right" id="kw2-IY-RFc">
                     <connections>
                         <action selector="segueBackToClock:" destination="ZNa-kC-iN4" id="ZUI-Ms-kJd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="yXd-jS-4Dr">
+                    <connections>
+                        <action selector="segueBackToClock:" destination="ZNa-kC-iN4" id="Avl-9I-88W"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
