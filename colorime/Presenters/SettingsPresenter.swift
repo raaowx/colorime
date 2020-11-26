@@ -5,8 +5,6 @@
 //  Created by raaowx on 19/11/20.
 //
 
-import Foundation
-
 class SettingsPresenter {
   private weak var delegate: SettingsDelegate?
   private let settings = Settings.shared
