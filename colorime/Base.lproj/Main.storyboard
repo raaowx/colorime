@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -148,7 +149,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYp-LZ-i2A">
                                                         <rect key="frame" x="2" y="0.0" width="307" height="20"/>
                                                         <fontDescription key="fontDescription" name="Orbitron-Bold" family="Orbitron" pointSize="20"/>
-                                                        <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" name="settings-section"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yr9-bc-s5g">
@@ -167,7 +168,7 @@
                                                                         <rect key="frame" x="250" y="9.6666666666666572" width="51" height="31"/>
                                                                     </switch>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" name="settings-background"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="33G-Ga-I53"/>
                                                                     <constraint firstItem="L2p-Qb-4QS" firstAttribute="centerY" secondItem="bbi-We-xxz" secondAttribute="centerY" id="AM4-XH-gVZ"/>
@@ -182,49 +183,49 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Time in main screen will be shown as">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="14" name="Orbitron-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content=" ">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="12" name="Orbitron-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content="#123456">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="14" name="Orbitron-Bold"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content=" ">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="12" name="Orbitron-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content="instead of">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="14" name="Orbitron-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content=" ">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="12" name="Orbitron-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content="12:34:56">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="14" name="Orbitron-Bold"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -250,7 +251,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efk-F9-3j7">
                                                         <rect key="frame" x="2" y="0.0" width="307" height="20"/>
                                                         <fontDescription key="fontDescription" name="Orbitron-Bold" family="Orbitron" pointSize="20"/>
-                                                        <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" name="settings-section"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7g-c1-TM8">
@@ -266,7 +267,7 @@
                                                                 <rect key="frame" x="250" y="9.6666666666666856" width="51" height="31"/>
                                                             </switch>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" name="settings-background"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="0Y1-ez-eyW"/>
                                                             <constraint firstAttribute="trailing" secondItem="Lgf-8F-SLo" secondAttribute="trailing" constant="12" id="6MH-RE-RWk"/>
@@ -292,7 +293,7 @@
                                                                         <rect key="frame" x="250" y="9.6666666666666856" width="51" height="31"/>
                                                                     </switch>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" name="settings-background"/>
                                                                 <constraints>
                                                                     <constraint firstItem="P0l-Sa-O7F" firstAttribute="centerY" secondItem="mme-A0-U99" secondAttribute="centerY" id="JYr-ZJ-fa9"/>
                                                                     <constraint firstAttribute="trailing" secondItem="Obb-3W-0do" secondAttribute="trailing" constant="12" id="K5X-wh-aCD"/>
@@ -307,49 +308,49 @@
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="Date in main screen will be shown as">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="14" name="Orbitron-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content=" ">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="12" name="Orbitron-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content="#150720">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="14" name="Orbitron-Bold"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content=" ">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="12" name="Orbitron-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content="instead of">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="14" name="Orbitron-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content=" ">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="12" name="Orbitron-Light"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content="15/07/20">
                                                                         <attributes>
-                                                                            <color key="NSColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.5568627451" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                            <color key="NSColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <font key="NSFont" size="14" name="Orbitron-Bold"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
@@ -376,7 +377,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3L2-qf-p36">
                                                         <rect key="frame" x="2" y="0.0" width="307" height="20"/>
                                                         <fontDescription key="fontDescription" name="Orbitron-Bold" family="Orbitron" pointSize="20"/>
-                                                        <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" name="settings-section"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnm-H3-F6o">
@@ -392,7 +393,7 @@
                                                                 <rect key="frame" x="250" y="9.6666666666666856" width="51" height="31"/>
                                                             </switch>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" name="settings-background"/>
                                                         <constraints>
                                                             <constraint firstItem="0xy-tO-u4k" firstAttribute="centerY" secondItem="cnm-H3-F6o" secondAttribute="centerY" id="1gy-22-utW"/>
                                                             <constraint firstItem="JcJ-79-Nqk" firstAttribute="leading" secondItem="cnm-H3-F6o" secondAttribute="leading" constant="12" id="60r-6s-PZ8"/>
@@ -486,6 +487,12 @@
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
+        <namedColor name="settings-background">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="settings-section">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
