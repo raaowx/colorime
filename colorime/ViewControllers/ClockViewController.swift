@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - Clock View Controller
 class ClockViewController: UIViewController {
-  @IBOutlet weak var colorimeV: UIView!
+  @IBOutlet weak var colorimeV: UIGradientView!
   @IBOutlet weak var dateL: UILabel!
   @IBOutlet weak var timeL: UILabel!
   @IBOutlet weak var settingsB: UIButton!
@@ -85,6 +85,7 @@ extension ClockViewController: ClockDelegate {
   }
 
   func setSolidBackground(color: String) {
+    colorimeV.removeGradient()
     guard let solidColor = UIColor(hex: color) else { return }
     colorimeV.backgroundColor = solidColor
   }
@@ -92,13 +93,7 @@ extension ClockViewController: ClockDelegate {
   func setGradientBackground(from start: String, to end: String) {
     guard let startColor = UIColor(hex: start) else { return }
     guard let endColor = UIColor(hex: end) else { return }
-    let gradient = CAGradientLayer()
-    gradient.frame = colorimeV.bounds
-    gradient.colors = [startColor.cgColor, endColor.cgColor]
-    // Remove last layer to keep the sublayer count at the minimum.
-    // This will avoid memory collapse.
-    colorimeV.layer.sublayers?.removeLast()
-    colorimeV.layer.addSublayer(gradient)
+    colorimeV.updateGradient(colors: startColor.cgColor, endColor.cgColor)
   }
 
   func setTime(time: String) {

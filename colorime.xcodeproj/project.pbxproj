@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591AE01C25B0D0F90037694A /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591AE01B25B0D0F90037694A /* UIGradientView.swift */; };
+		591AE01D25B0D0F90037694A /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591AE01B25B0D0F90037694A /* UIGradientView.swift */; };
+		591AE01E25B0D0F90037694A /* UIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591AE01B25B0D0F90037694A /* UIGradientView.swift */; };
 		59220EBA2566E5A800F1C665 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EB92566E5A800F1C665 /* SettingsViewController.swift */; };
 		59220EBB2566E5A900F1C665 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EB92566E5A800F1C665 /* SettingsViewController.swift */; };
 		59220EBC2566E5A900F1C665 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EB92566E5A800F1C665 /* SettingsViewController.swift */; };
@@ -66,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		591AE01B25B0D0F90037694A /* UIGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGradientView.swift; sourceTree = "<group>"; };
 		59220EB92566E5A800F1C665 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		59220EC02566E5C300F1C665 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		5947CAB4255310CD0043B474 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
@@ -121,6 +125,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		591AE01A25B0D0B40037694A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				591AE01B25B0D0F90037694A /* UIGradientView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5991408425531AC6008D9B6D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,13 +150,13 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
-		5991408625531AE1008D9B6D /* Views */ = {
+		5991408625531AE1008D9B6D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				59D0BE03253E9E0B00597572 /* ClockViewController.swift */,
 				59220EB92566E5A800F1C665 /* SettingsViewController.swift */,
 			);
-			path = Views;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		59A4FB882556CF3C0062F589 /* Fonts */ = {
@@ -191,17 +203,18 @@
 			isa = PBXGroup;
 			children = (
 				59D0BE0D253E9E0D00597572 /* Info.plist */,
+				59D0BDFF253E9E0B00597572 /* AppDelegate.swift */,
+				59D0BE01253E9E0B00597572 /* SceneDelegate.swift */,
+				59D0BE08253E9E0D00597572 /* Assets.xcassets */,
 				59D0BE0A253E9E0D00597572 /* LaunchScreen.storyboard */,
 				59D0BE05253E9E0B00597572 /* Main.storyboard */,
 				5947CAC4255311B60043B474 /* Localizable.strings */,
-				59D0BE08253E9E0D00597572 /* Assets.xcassets */,
-				59A4FB882556CF3C0062F589 /* Fonts */,
-				59D0BDFF253E9E0B00597572 /* AppDelegate.swift */,
-				59D0BE01253E9E0B00597572 /* SceneDelegate.swift */,
 				59A4FBB5255995860062F589 /* Extensions */,
-				5991408625531AE1008D9B6D /* Views */,
-				5991408525531ACE008D9B6D /* Presenters */,
+				59A4FB882556CF3C0062F589 /* Fonts */,
 				5991408425531AC6008D9B6D /* Models */,
+				5991408525531ACE008D9B6D /* Presenters */,
+				5991408625531AE1008D9B6D /* ViewControllers */,
+				591AE01A25B0D0B40037694A /* Views */,
 			);
 			path = colorime;
 			sourceTree = "<group>";
@@ -399,6 +412,7 @@
 				59220EC12566E5C300F1C665 /* SettingsPresenter.swift in Sources */,
 				59A4FBC7255997B60062F589 /* UIColor.swift in Sources */,
 				594CC441255FF8BB00027EA1 /* ClockPresenter.swift in Sources */,
+				591AE01C25B0D0F90037694A /* UIGradientView.swift in Sources */,
 				59220EBA2566E5A800F1C665 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59D0BE17253E9E0D00597572 /* colorimeTests.swift in Sources */,
+				591AE01D25B0D0F90037694A /* UIGradientView.swift in Sources */,
 				59A4FBC8255997B60062F589 /* UIColor.swift in Sources */,
 				59A4FBD5255C4C240062F589 /* Settings.swift in Sources */,
 				59220EBB2566E5A900F1C665 /* SettingsViewController.swift in Sources */,
@@ -421,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59D0BE22253E9E0D00597572 /* colorimeUITests.swift in Sources */,
+				591AE01E25B0D0F90037694A /* UIGradientView.swift in Sources */,
 				59A4FBC9255997B60062F589 /* UIColor.swift in Sources */,
 				59A4FBD6255C4C240062F589 /* Settings.swift in Sources */,
 				59220EBC2566E5A900F1C665 /* SettingsViewController.swift in Sources */,
