@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Hz3-oD-hlM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="tintColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.96078431369999995" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="tintColor" name="clock-normal"/>
                                 <state key="normal">
                                     <imageReference key="image" image="gear" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
@@ -55,18 +55,18 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hAG-bA-nkc">
-                                <rect key="frame" x="50" y="381" width="275" height="50"/>
+                                <rect key="frame" x="45" y="381" width="285" height="50"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGX-rZ-Z32">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Light" family="Orbitron" pointSize="50"/>
-                                        <color key="textColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.96078431369999995" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="clock-normal"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sW-vC-nvx">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="50"/>
                                         <fontDescription key="fontDescription" name="Orbitron-Light" family="Orbitron" pointSize="50"/>
-                                        <color key="textColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.96078431372549022" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="textColor" name="clock-normal"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -84,7 +84,7 @@
                             <constraint firstItem="hAG-bA-nkc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5rt-1B-Uv6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fYJ-Mj-SuM" secondAttribute="trailing" constant="15" id="A9C-No-Qmt"/>
                             <constraint firstItem="fYJ-Mj-SuM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="BiI-B8-zKv"/>
-                            <constraint firstItem="hAG-bA-nkc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Gm6-8M-Y7u"/>
+                            <constraint firstItem="hAG-bA-nkc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="Gm6-8M-Y7u"/>
                             <constraint firstItem="nCg-Ti-nBg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lXU-02-xek"/>
                             <constraint firstItem="nCg-Ti-nBg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pxm-md-oiQ"/>
                             <constraint firstItem="hAG-bA-nkc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yhB-QK-mdf"/>
@@ -141,7 +141,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alf-e2-5aJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="444.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="506.66666666666669"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="luE-cP-HtL">
                                                 <rect key="frame" x="32" y="32" width="311" height="130"/>
@@ -372,7 +372,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="w8R-C1-YQH">
-                                                <rect key="frame" x="32" y="327.33333333333331" width="311" height="85.333333333333314"/>
+                                                <rect key="frame" x="32" y="327.33333333333331" width="311" height="147.33333333333331"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3L2-qf-p36">
                                                         <rect key="frame" x="2" y="0.0" width="307" height="23.333333333333332"/>
@@ -403,9 +403,33 @@
                                                             <constraint firstAttribute="trailing" secondItem="0xy-tO-u4k" secondAttribute="trailing" constant="12" id="wdk-kg-qsc"/>
                                                         </constraints>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WfO-vp-Ccu">
+                                                        <rect key="frame" x="0.0" y="97.333333333333314" width="311" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vivid colors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAs-OS-4UE">
+                                                                <rect key="frame" x="12" y="14.666666666666742" width="226" height="21"/>
+                                                                <fontDescription key="fontDescription" name="Orbitron-Medium" family="Orbitron" pointSize="18"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="miA-gp-9qA">
+                                                                <rect key="frame" x="250" y="9.6666666666667425" width="51" height="31"/>
+                                                            </switch>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="settings-background"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="miA-gp-9qA" secondAttribute="trailing" constant="12" id="7Bf-f9-aTD"/>
+                                                            <constraint firstItem="miA-gp-9qA" firstAttribute="centerY" secondItem="WfO-vp-Ccu" secondAttribute="centerY" id="Kcc-Zl-QF1"/>
+                                                            <constraint firstItem="tAs-OS-4UE" firstAttribute="centerY" secondItem="WfO-vp-Ccu" secondAttribute="centerY" id="cwD-zL-CkW"/>
+                                                            <constraint firstItem="miA-gp-9qA" firstAttribute="leading" secondItem="tAs-OS-4UE" secondAttribute="trailing" constant="12" id="eM8-6f-vze"/>
+                                                            <constraint firstItem="tAs-OS-4UE" firstAttribute="leading" secondItem="WfO-vp-Ccu" secondAttribute="leading" constant="12" id="hPz-Hv-Ggz"/>
+                                                            <constraint firstAttribute="height" constant="50" id="lX8-tt-bgO"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="cnm-H3-F6o" firstAttribute="leading" secondItem="w8R-C1-YQH" secondAttribute="leading" id="48B-F0-5Kp"/>
+                                                    <constraint firstItem="WfO-vp-Ccu" firstAttribute="leading" secondItem="w8R-C1-YQH" secondAttribute="leading" id="h6Z-bB-oM5"/>
                                                     <constraint firstItem="3L2-qf-p36" firstAttribute="leading" secondItem="w8R-C1-YQH" secondAttribute="leading" constant="2" id="hWE-Ot-x2k"/>
                                                 </constraints>
                                             </stackView>
@@ -464,6 +488,8 @@
                         <outlet property="dateShowV" destination="f7g-c1-TM8" id="Ljj-qV-Jb1"/>
                         <outlet property="screenKeepActiveS" destination="0xy-tO-u4k" id="sHP-dt-Z08"/>
                         <outlet property="screenKeepActiveV" destination="cnm-H3-F6o" id="O9d-Vl-Wpa"/>
+                        <outlet property="screenVividColorsS" destination="miA-gp-9qA" id="OO5-dq-3CG"/>
+                        <outlet property="screenVividColorsV" destination="WfO-vp-Ccu" id="IsM-ml-1PL"/>
                         <outlet property="timeHexFormatV" destination="bbi-We-xxz" id="5Lw-7w-u2x"/>
                         <outlet property="timeHexS" destination="sac-t3-QaW" id="03M-AS-Lq0"/>
                         <segue destination="9xt-G8-ucZ" kind="unwind" identifier="unwindClock" unwindAction="unwindToClock:" id="crh-IA-KVm"/>
@@ -487,6 +513,9 @@
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
+        <namedColor name="clock-normal">
+            <color red="0.92156862745098034" green="0.92156862745098034" blue="0.96078431372549022" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="settings-background">
             <color red="0.47099998593330383" green="0.47099998593330383" blue="0.50199997425079346" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

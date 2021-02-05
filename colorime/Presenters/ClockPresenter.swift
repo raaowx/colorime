@@ -20,6 +20,7 @@ class ClockPresenter {
     let settings = Settings.shared
     delegate.toggleShowDate(settings.read(option: .showDate))
     delegate.toggleScreenActive(settings.read(option: .keepScreenActive))
+    delegate.toggleVividColors(settings.read(option: .vividColors))
   }
 
   func startClock() {
@@ -49,12 +50,33 @@ class ClockPresenter {
           delegate.setDate(date: date.toDateString())
         }
       }
-      closures.append { delegate, date in
-        delegate.setGradientBackground(from: date.toDateHex(), to: date.toTimeHex())
+      if settings.read(option: .vividColors) {
+        closures.append { delegate, date in
+          guard let start = date.toVividDateHex(),
+            let end = date.toVividTimeHex() else {
+            delegate.setGradientBackground(from: date.toDateHex(), to: date.toTimeHex())
+            return
+          }
+          delegate.setGradientBackground(from: start, to: end)
+        }
+      } else {
+        closures.append { delegate, date in
+          delegate.setGradientBackground(from: date.toDateHex(), to: date.toTimeHex())
+        }
       }
     } else {
-      closures.append { delegate, date in
-        delegate.setSolidBackground(color: date.toTimeHex())
+      if settings.read(option: .vividColors) {
+        closures.append { delegate, date in
+          guard let color = date.toVividTimeHex() else {
+            delegate.setSolidBackground(color: date.toTimeHex())
+            return
+          }
+          delegate.setSolidBackground(color: color)
+        }
+      } else {
+        closures.append { delegate, date in
+          delegate.setSolidBackground(color: date.toTimeHex())
+        }
       }
     }
 
@@ -76,6 +98,7 @@ class ClockPresenter {
 protocol ClockDelegate: class {
   func toggleShowDate(_ show: Bool)
   func toggleScreenActive(_ keepActive: Bool)
+  func toggleVividColors(_ vivid: Bool)
   func setSolidBackground(color: String)
   func setGradientBackground(from start: String, to end: String)
   func setTime(time: String)

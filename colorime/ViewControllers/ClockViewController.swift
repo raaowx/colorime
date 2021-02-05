@@ -13,10 +13,15 @@ class ClockViewController: UIViewController {
   @IBOutlet weak var dateL: UILabel!
   @IBOutlet weak var timeL: UILabel!
   @IBOutlet weak var settingsB: UIButton!
-  override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+  override var preferredStatusBarStyle: UIStatusBarStyle { return statusBarStyle }
   override var prefersStatusBarHidden: Bool { return hideStatusBar }
   var presenter: ClockPresenter?
   var statusBarTimer: Timer?
+  var statusBarStyle: UIStatusBarStyle = .lightContent {
+    didSet {
+      self.setNeedsStatusBarAppearanceUpdate()
+    }
+  }
   var hideStatusBar = true {
     didSet {
       self.setNeedsStatusBarAppearanceUpdate()
@@ -82,6 +87,20 @@ extension ClockViewController: ClockDelegate {
 
   func toggleScreenActive(_ keepActive: Bool) {
     UIApplication.shared.isIdleTimerDisabled = keepActive
+  }
+
+  func toggleVividColors(_ vivid: Bool) {
+    if vivid {
+      statusBarStyle = .darkContent
+      settingsB.tintColor = UIColor(named: "clock-vivid")
+      dateL.textColor = UIColor(named: "clock-vivid")
+      timeL.textColor = UIColor(named: "clock-vivid")
+      return
+    }
+    statusBarStyle = .lightContent
+    settingsB.tintColor = UIColor(named: "clock-normal")
+    dateL.textColor = UIColor(named: "clock-normal")
+    timeL.textColor = UIColor(named: "clock-normal")
   }
 
   func setSolidBackground(color: String) {

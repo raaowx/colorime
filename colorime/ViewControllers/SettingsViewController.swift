@@ -18,6 +18,8 @@ class SettingsViewController: UIViewController {
   @IBOutlet weak var dateHexFormatS: UISwitch!
   @IBOutlet weak var screenKeepActiveV: UIView!
   @IBOutlet weak var screenKeepActiveS: UISwitch!
+  @IBOutlet weak var screenVividColorsV: UIView!
+  @IBOutlet weak var screenVividColorsS: UISwitch!
   var presenter: SettingsPresenter?
 
   override func viewDidLoad() {
@@ -26,6 +28,7 @@ class SettingsViewController: UIViewController {
     dateShowV.layer.cornerRadius = 10
     dateHexFormatV.layer.cornerRadius = 10
     screenKeepActiveV.layer.cornerRadius = 10
+    screenVividColorsV.layer.cornerRadius = 10
     if let borderColor = UIColor(hex: "#3C3C431E")?.cgColor {
       timeHexFormatV.layer.borderWidth = 1
       timeHexFormatV.layer.borderColor = borderColor
@@ -35,11 +38,14 @@ class SettingsViewController: UIViewController {
       dateHexFormatV.layer.borderColor = borderColor
       screenKeepActiveV.layer.borderWidth = 1
       screenKeepActiveV.layer.borderColor = borderColor
+      screenVividColorsV.layer.borderWidth = 1
+      screenVividColorsV.layer.borderColor = borderColor
     }
     timeHexS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
     dateShowS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
     dateHexFormatS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
     screenKeepActiveS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
+    screenVividColorsS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
     presenter = SettingsPresenter(delegate: self)
   }
 
@@ -53,6 +59,8 @@ class SettingsViewController: UIViewController {
       presenter?.updateSetting(option: .hexDate, value: which.isOn)
     case screenKeepActiveS:
       presenter?.updateSetting(option: .keepScreenActive, value: which.isOn)
+    case screenVividColorsS:
+      presenter?.updateSetting(option: .vividColors, value: which.isOn)
     default: return
     }
   }
@@ -90,6 +98,8 @@ extension SettingsViewController: SettingsDelegate {
       dateHexFormatS.setOn(value, animated: true)
     case .keepScreenActive:
       screenKeepActiveS.setOn(value, animated: true)
+    case .vividColors:
+      screenVividColorsS.setOn(value, animated: true)
     }
   }
 }

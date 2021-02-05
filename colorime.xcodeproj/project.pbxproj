@@ -16,6 +16,9 @@
 		59220EC12566E5C300F1C665 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EC02566E5C300F1C665 /* SettingsPresenter.swift */; };
 		59220EC22566E5C300F1C665 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EC02566E5C300F1C665 /* SettingsPresenter.swift */; };
 		59220EC32566E5C300F1C665 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EC02566E5C300F1C665 /* SettingsPresenter.swift */; };
+		593C8F6725CDF4A3005C18BB /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C8F6625CDF4A3005C18BB /* Array.swift */; };
+		593C8F6825CDF4A3005C18BB /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C8F6625CDF4A3005C18BB /* Array.swift */; };
+		593C8F6925CDF4A3005C18BB /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C8F6625CDF4A3005C18BB /* Array.swift */; };
 		5947CAC0255311B60043B474 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5947CAC4255311B60043B474 /* Localizable.strings */; };
 		5947CAC1255311B60043B474 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5947CAC4255311B60043B474 /* Localizable.strings */; };
 		5947CAC2255311B60043B474 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5947CAC4255311B60043B474 /* Localizable.strings */; };
@@ -72,6 +75,7 @@
 		591AE01B25B0D0F90037694A /* UIGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGradientView.swift; sourceTree = "<group>"; };
 		59220EB92566E5A800F1C665 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		59220EC02566E5C300F1C665 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		593C8F6625CDF4A3005C18BB /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		5947CAB4255310CD0043B474 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		5947CAB5255310CD0043B474 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5947CAC3255311B60043B474 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			children = (
 				59A4FBBC255995BD0062F589 /* Date.swift */,
 				59A4FBC6255997B60062F589 /* UIColor.swift */,
+				593C8F6625CDF4A3005C18BB /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 				59D0BE02253E9E0B00597572 /* SceneDelegate.swift in Sources */,
 				59A4FBBD255995BD0062F589 /* Date.swift in Sources */,
 				59220EC12566E5C300F1C665 /* SettingsPresenter.swift in Sources */,
+				593C8F6725CDF4A3005C18BB /* Array.swift in Sources */,
 				59A4FBC7255997B60062F589 /* UIColor.swift in Sources */,
 				594CC441255FF8BB00027EA1 /* ClockPresenter.swift in Sources */,
 				591AE01C25B0D0F90037694A /* UIGradientView.swift in Sources */,
@@ -426,6 +432,7 @@
 				59A4FBC8255997B60062F589 /* UIColor.swift in Sources */,
 				59A4FBD5255C4C240062F589 /* Settings.swift in Sources */,
 				59220EBB2566E5A900F1C665 /* SettingsViewController.swift in Sources */,
+				593C8F6825CDF4A3005C18BB /* Array.swift in Sources */,
 				59A4FBBE255995BD0062F589 /* Date.swift in Sources */,
 				59220EC22566E5C300F1C665 /* SettingsPresenter.swift in Sources */,
 			);
@@ -440,6 +447,7 @@
 				59A4FBC9255997B60062F589 /* UIColor.swift in Sources */,
 				59A4FBD6255C4C240062F589 /* Settings.swift in Sources */,
 				59220EBC2566E5A900F1C665 /* SettingsViewController.swift in Sources */,
+				593C8F6925CDF4A3005C18BB /* Array.swift in Sources */,
 				59A4FBBF255995BD0062F589 /* Date.swift in Sources */,
 				59220EC32566E5C300F1C665 /* SettingsPresenter.swift in Sources */,
 			);

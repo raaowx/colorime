@@ -16,6 +16,7 @@ struct Settings {
     case showDate = "colorime-date-show"
     case hexDate = "colorime-date-hex"
     case keepScreenActive = "colorime-screen-keepactive"
+    case vividColors = "colorime-vivid-colors"
   }
 
   private init() {
