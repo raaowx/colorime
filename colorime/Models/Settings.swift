@@ -15,19 +15,30 @@ struct Settings {
     case hexTime = "colorime-time-hex"
     case showDate = "colorime-date-show"
     case hexDate = "colorime-date-hex"
-    case keepScreenActive = "colorime-screen-keepactive"
-    case vividColors = "colorime-vivid-colors"
+    case keepActiveScreen = "colorime-screen-keepactive"
+    case colorsScreen = "colorime-screen-colors"
+  }
+
+  enum Colors: Int {
+    case normal = 0
+    case bright = 1
+    case vivid = 2
   }
 
   private init() {
     defaults = UserDefaults.standard
   }
 
-  func read(option: Options) -> Bool {
-    defaults.bool(forKey: option.rawValue)
+  func read(option: Options) -> Any {
+    switch option {
+    case .hexTime, .showDate, .hexDate, .keepActiveScreen:
+      return defaults.bool(forKey: option.rawValue)
+    case .colorsScreen:
+      return defaults.integer(forKey: option.rawValue)
+    }
   }
 
-  func write(option: Options, withValue value: Bool) {
+  func write(option: Options, withValue value: Any) {
     defaults.setValue(value, forKey: option.rawValue)
   }
 }

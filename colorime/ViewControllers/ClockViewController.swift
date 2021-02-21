@@ -89,18 +89,19 @@ extension ClockViewController: ClockDelegate {
     UIApplication.shared.isIdleTimerDisabled = keepActive
   }
 
-  func toggleVividColors(_ vivid: Bool) {
-    if vivid {
+  func setColorsAppereance(_ color: Settings.Colors) {
+    switch color {
+    case .normal:
+      statusBarStyle = .lightContent
+      settingsB.tintColor = UIColor(named: "clock-normal")
+      dateL.textColor = UIColor(named: "clock-normal")
+      timeL.textColor = UIColor(named: "clock-normal")
+    case .bright, .vivid:
       statusBarStyle = .darkContent
       settingsB.tintColor = UIColor(named: "clock-vivid")
       dateL.textColor = UIColor(named: "clock-vivid")
       timeL.textColor = UIColor(named: "clock-vivid")
-      return
     }
-    statusBarStyle = .lightContent
-    settingsB.tintColor = UIColor(named: "clock-normal")
-    dateL.textColor = UIColor(named: "clock-normal")
-    timeL.textColor = UIColor(named: "clock-normal")
   }
 
   func setSolidBackground(color: String) {

@@ -18,8 +18,8 @@ class SettingsViewController: UIViewController {
   @IBOutlet weak var dateHexFormatS: UISwitch!
   @IBOutlet weak var screenKeepActiveV: UIView!
   @IBOutlet weak var screenKeepActiveS: UISwitch!
-  @IBOutlet weak var screenVividColorsV: UIView!
-  @IBOutlet weak var screenVividColorsS: UISwitch!
+  @IBOutlet weak var screenColorsV: UIView!
+  @IBOutlet weak var screenColorsSC: UISegmentedControl!
   var presenter: SettingsPresenter?
 
   override func viewDidLoad() {
@@ -28,7 +28,7 @@ class SettingsViewController: UIViewController {
     dateShowV.layer.cornerRadius = 10
     dateHexFormatV.layer.cornerRadius = 10
     screenKeepActiveV.layer.cornerRadius = 10
-    screenVividColorsV.layer.cornerRadius = 10
+    screenColorsV.layer.cornerRadius = 10
     if let borderColor = UIColor(hex: "#3C3C431E")?.cgColor {
       timeHexFormatV.layer.borderWidth = 1
       timeHexFormatV.layer.borderColor = borderColor
@@ -38,14 +38,14 @@ class SettingsViewController: UIViewController {
       dateHexFormatV.layer.borderColor = borderColor
       screenKeepActiveV.layer.borderWidth = 1
       screenKeepActiveV.layer.borderColor = borderColor
-      screenVividColorsV.layer.borderWidth = 1
-      screenVividColorsV.layer.borderColor = borderColor
+      screenColorsV.layer.borderWidth = 1
+      screenColorsV.layer.borderColor = borderColor
     }
     timeHexS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
     dateShowS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
     dateHexFormatS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
     screenKeepActiveS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
-    screenVividColorsS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
+    screenColorsSC.addTarget(self, action: #selector(segmentedControlValueChanged(which:)), for: .valueChanged)
     presenter = SettingsPresenter(delegate: self)
   }
 
@@ -58,9 +58,15 @@ class SettingsViewController: UIViewController {
     case dateHexFormatS:
       presenter?.updateSetting(option: .hexDate, value: which.isOn)
     case screenKeepActiveS:
-      presenter?.updateSetting(option: .keepScreenActive, value: which.isOn)
-    case screenVividColorsS:
-      presenter?.updateSetting(option: .vividColors, value: which.isOn)
+      presenter?.updateSetting(option: .keepActiveScreen, value: which.isOn)
+    default: return
+    }
+  }
+
+  @objc func segmentedControlValueChanged(which: UISegmentedControl) {
+    switch which {
+    case screenColorsSC:
+      presenter?.updateSetting(option: .colorsScreen, value: which.selectedSegmentIndex)
     default: return
     }
   }
@@ -88,18 +94,28 @@ extension SettingsViewController: SettingsDelegate {
     }
   }
 
-  func loadSettings(option: Settings.Options, value: Bool) {
+  func loadSettings(option: Settings.Options, value: Any) {
     switch option {
     case .hexTime:
-      timeHexS.setOn(value, animated: true)
+      if let value = value as? Bool {
+        timeHexS.setOn(value, animated: true)
+      }
     case .showDate:
-      dateShowS.setOn(value, animated: true)
+      if let value = value as? Bool {
+        dateShowS.setOn(value, animated: true)
+      }
     case .hexDate:
-      dateHexFormatS.setOn(value, animated: true)
-    case .keepScreenActive:
-      screenKeepActiveS.setOn(value, animated: true)
-    case .vividColors:
-      screenVividColorsS.setOn(value, animated: true)
+      if let value = value as? Bool {
+        dateHexFormatS.setOn(value, animated: true)
+      }
+    case .keepActiveScreen:
+      if let value = value as? Bool {
+        screenKeepActiveS.setOn(value, animated: true)
+      }
+    case .colorsScreen:
+      if let value = value as? Int {
+        screenColorsSC.selectedSegmentIndex = value
+      }
     }
   }
 }

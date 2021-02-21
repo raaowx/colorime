@@ -32,7 +32,7 @@ extension Date {
     return "#\(formatter.string(from: self))"
   }
 
-  func toVividDateHex() -> String? {
+  func toBrightDateHex() -> String? {
     let hex = Array<String>.hex
     let formatter = DateFormatter()
     formatter.dateFormat = "ddMMyy"
@@ -44,7 +44,7 @@ extension Date {
     return date
   }
 
-  func toVividTimeHex() -> String? {
+  func toBrightTimeHex() -> String? {
     let hex = Array<String>.hex
     let formatter = DateFormatter()
     formatter.dateFormat = "HHmmss"
@@ -52,6 +52,32 @@ extension Date {
     for char in formatter.string(from: self) {
       guard let index = hex.firstIndex(of: "\(char)") else { return nil }
       date.append(hex[abs(index - hex.count + 1)])
+    }
+    return date
+  }
+
+  func toVividDateHex() -> String? {
+    let hex = Array<String>.hex
+    let formatter = DateFormatter()
+    formatter.dateFormat = "ddMMyy"
+    var date = "#"
+    for char in formatter.string(from: self) {
+      guard let index = hex.firstIndex(of: "\(char)") else { return nil }
+      let oppositeIndex = abs(index - hex.count + 1)
+      date.append(hex[abs(oppositeIndex - index)])
+    }
+    return date
+  }
+
+  func toVividTimeHex() -> String? {
+    let hex = Array<String>.hex
+    let formatter = DateFormatter()
+    formatter.dateFormat = "HHmmss"
+    var date = "#"
+    for char in formatter.string(from: self) {
+      guard let index = hex.firstIndex(of: "\(char)") else { return nil }
+      let oppositeIndex = abs(index - hex.count + 1)
+      date.append(hex[abs(oppositeIndex - index)])
     }
     return date
   }
