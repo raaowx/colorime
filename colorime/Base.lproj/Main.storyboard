@@ -178,7 +178,7 @@
                                                                     <constraint firstItem="sac-t3-QaW" firstAttribute="centerY" secondItem="bbi-We-xxz" secondAttribute="centerY" id="vte-0F-pDa"/>
                                                                 </constraints>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time in main screen will be shown as #123456 instead of 12:34:56" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reV-Eh-g6k">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time in main screen will be shown as #123456 instead of 12:34:56" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reV-Eh-g6k">
                                                                 <rect key="frame" x="24" y="62" width="263" height="28"/>
                                                                 <fontDescription key="fontDescription" name="Orbitron-Light" family="Orbitron" pointSize="12"/>
                                                                 <color key="textColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
@@ -254,7 +254,7 @@
                                                                     <constraint firstItem="Obb-3W-0do" firstAttribute="centerY" secondItem="mme-A0-U99" secondAttribute="centerY" id="h6a-ee-q6o"/>
                                                                 </constraints>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date in main screen will be shown as #150720 instead of 15/07/20" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrj-7v-1Qu">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date in main screen will be shown as #150720 instead of 15/07/20" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrj-7v-1Qu">
                                                                 <rect key="frame" x="24" y="62" width="263" height="0.0"/>
                                                                 <fontDescription key="fontDescription" name="Orbitron-Light" family="Orbitron" pointSize="12"/>
                                                                 <color key="textColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
