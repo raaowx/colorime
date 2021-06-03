@@ -11,6 +11,10 @@ struct Settings {
   static var shared = Settings()
   private let defaults: UserDefaults
 
+  enum Localization: String {
+    case american = "en"
+  }
+
   enum Options: String, CaseIterable {
     case hexTime = "colorime-time-hex"
     case showDate = "colorime-date-show"

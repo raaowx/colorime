@@ -1,0 +1,45 @@
+
+/* Class = "UILabel"; text = "Screen"; ObjectID = "3L2-qf-p36"; */
+"3L2-qf-p36.text" = "Screen";
+
+/* Class = "UISegmentedControl"; CgE-GK-fGE.segmentTitles[0] = "Normal"; ObjectID = "CgE-GK-fGE"; */
+"CgE-GK-fGE.segmentTitles[0]" = "Normal";
+
+/* Class = "UISegmentedControl"; CgE-GK-fGE.segmentTitles[1] = "Bright"; ObjectID = "CgE-GK-fGE"; */
+"CgE-GK-fGE.segmentTitles[1]" = "Bright";
+
+/* Class = "UISegmentedControl"; CgE-GK-fGE.segmentTitles[2] = "Vivid"; ObjectID = "CgE-GK-fGE"; */
+"CgE-GK-fGE.segmentTitles[2]" = "Vivid";
+
+/* Class = "UILabel"; text = "Keep active"; ObjectID = "JcJ-79-Nqk"; */
+"JcJ-79-Nqk.text" = "Keep active";
+
+/* Class = "UILabel"; text = "Hex format"; ObjectID = "L2p-Qb-4QS"; */
+"L2p-Qb-4QS.text" = "Hex format";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "NJI-2U-hyL"; */
+"NJI-2U-hyL.title" = "Settings";
+
+/* Class = "UILabel"; text = "Hex format"; ObjectID = "P0l-Sa-O7F"; */
+"P0l-Sa-O7F.text" = "Hex format";
+
+/* Class = "UILabel"; text = "Date in main screen will be shown as #150720 instead of 15/07/20"; ObjectID = "Yrj-7v-1Qu"; */
+"Yrj-7v-1Qu.text" = "Date on main screen will be shown as #150720 instead of 15/07/20.";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "cYp-LZ-i2A"; */
+"cYp-LZ-i2A.text" = "Time";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "efk-F9-3j7"; */
+"efk-F9-3j7.text" = "Date";
+
+/* Class = "UILabel"; text = "Time in main screen will be shown as #123456 instead of 12:34:56"; ObjectID = "reV-Eh-g6k"; */
+"reV-Eh-g6k.text" = "Time on main screen will be shown as #123456 instead of 12:34:56.";
+
+/* Class = "UILabel"; text = "Colors"; ObjectID = "tAs-OS-4UE"; */
+"tAs-OS-4UE.text" = "Colours";
+
+/* Class = "UILabel"; text = "Show"; ObjectID = "uOE-QT-P0H"; */
+"uOE-QT-P0H.text" = "Show";
+
+/* Class = "UIBarButtonItem"; title = "Close"; ObjectID = "zMA-nV-FAw"; */
+"zMA-nV-FAw.title" = "Close";

@@ -5,7 +5,7 @@
 //  Created by raaowx on 19/11/20.
 //
 
-protocol SettingsDelegate: class {
+protocol SettingsDelegate: AnyObject {
   func showContainer(option: Settings.Options)
   func loadSettings(option: Settings.Options, value: Any)
 }

@@ -6,7 +6,7 @@
 //
 import Foundation
 
-protocol ClockDelegate: class {
+protocol ClockDelegate: AnyObject {
   func toggleShowDate(_ show: Bool)
   func toggleScreenActive(_ keepActive: Bool)
   func setColorsAppereance(_ color: Settings.Colors)
@@ -126,11 +126,17 @@ extension ClockPresenter {
   }
 
   private static let dateClosure: ClockClosure = { delegate, date in
-    delegate.setDate(date: date.toDateString())
+    delegate.setDate(
+      date: (Bundle.main.preferredLocalizations.first == Settings.Localization.american.rawValue)
+      ? date.toAmericanDateString()
+      : date.toDateString())
   }
 
   private static let hexDateClosure: ClockClosure = { delegate, date in
-    delegate.setDate(date: date.toDateHex())
+    delegate.setDate(
+      date: (Bundle.main.preferredLocalizations.first == Settings.Localization.american.rawValue)
+      ? date.toAmericanDateHex()
+      : date.toDateHex())
   }
 
   private static let solidNormalClosure: ClockClosure = { delegate, date in
@@ -154,22 +160,30 @@ extension ClockPresenter {
   }
 
   private static let gradientNormalClosure: ClockClosure = { delegate, date in
-    delegate.setGradientBackground(from: date.toDateHex(), to: date.toTimeHex())
+    delegate.setGradientBackground(
+      from: (Bundle.main.preferredLocalizations.first == Settings.Localization.american.rawValue)
+      ? date.toAmericanDateHex()
+      : date.toDateHex(),
+      to: date.toTimeHex())
   }
 
   private static let gradientBrightClosure: ClockClosure = { delegate, date in
-    guard let start = date.toBrightDateHex(),
+    guard let start = (Bundle.main.preferredLocalizations.first == Settings.Localization.american.rawValue)
+      ? date.toAmericanBrightDateHex()
+      : date.toBrightDateHex(),
       let end = date.toBrightTimeHex() else {
-      delegate.setGradientBackground(from: date.toDateHex(), to: date.toTimeHex())
+      gradientNormalClosure(delegate, date)
       return
     }
     delegate.setGradientBackground(from: start, to: end)
   }
 
   private static let gradientVividClosure: ClockClosure = { delegate, date in
-    guard let start = date.toVividDateHex(),
+    guard let start = (Bundle.main.preferredLocalizations.first == Settings.Localization.american.rawValue)
+      ? date.toAmericanVividDateHex()
+      : date.toVividDateHex(),
       let end = date.toVividTimeHex() else {
-      delegate.setGradientBackground(from: date.toDateHex(), to: date.toTimeHex())
+      gradientNormalClosure(delegate, date)
       return
     }
     delegate.setGradientBackground(from: start, to: end)
