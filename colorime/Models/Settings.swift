@@ -11,10 +11,6 @@ struct Settings {
   static var shared = Settings()
   private let defaults: UserDefaults
 
-  enum Localization: String {
-    case american = "en"
-  }
-
   enum Options: String, CaseIterable {
     case hexTime = "colorime-time-hex"
     case showDate = "colorime-date-show"
@@ -44,5 +40,23 @@ struct Settings {
 
   func write(option: Options, withValue value: Any) {
     defaults.setValue(value, forKey: option.rawValue)
+  }
+}
+
+// MARK: - Enums
+extension Settings {
+  enum Devices: String {
+    case ipad = "iPad"
+  }
+
+  enum Localization: String {
+    case american = "en"
+  }
+
+  enum Fonts: String {
+    case orbitronblack = "Orbitron Black"
+    case orbitronbold = "Orbitron Bold"
+    case orbitronlight = "Orbitron Light"
+    case orbitronmedium = "Orbitron Medium"
   }
 }

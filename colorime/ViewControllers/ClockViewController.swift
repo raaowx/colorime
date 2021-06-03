@@ -32,6 +32,10 @@ class ClockViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     presenter = ClockPresenter(delegate: self)
+    if UIDevice.current.localizedModel == Settings.Devices.ipad.rawValue {
+      dateL.font = UIFont(name: Settings.Fonts.orbitronlight.rawValue, size: 80.0)
+      timeL.font = UIFont(name: Settings.Fonts.orbitronlight.rawValue, size: 80.0)
+    }
   }
 
   override func viewDidAppear(_ animated: Bool) {
