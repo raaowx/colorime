@@ -393,6 +393,7 @@
                         <outlet property="dateHexFormatS" destination="Obb-3W-0do" id="DiW-NG-t2R"/>
                         <outlet property="dateHexFormatSV" destination="SAM-w8-gft" id="HYe-38-dBe"/>
                         <outlet property="dateHexFormatV" destination="mme-A0-U99" id="f7i-4t-b3I"/>
+                        <outlet property="dateHexTipL" destination="Yrj-7v-1Qu" id="UTS-2E-Seg"/>
                         <outlet property="dateShowS" destination="Lgf-8F-SLo" id="hDg-EI-bh8"/>
                         <outlet property="dateShowV" destination="f7g-c1-TM8" id="Ljj-qV-Jb1"/>
                         <outlet property="screenColorsSC" destination="CgE-GK-fGE" id="F1C-Rt-ZSh"/>
@@ -401,6 +402,7 @@
                         <outlet property="screenKeepActiveV" destination="cnm-H3-F6o" id="O9d-Vl-Wpa"/>
                         <outlet property="timeHexFormatV" destination="bbi-We-xxz" id="5Lw-7w-u2x"/>
                         <outlet property="timeHexS" destination="sac-t3-QaW" id="03M-AS-Lq0"/>
+                        <outlet property="timeHexTipL" destination="reV-Eh-g6k" id="Vfb-1G-iGk"/>
                         <segue destination="9xt-G8-ucZ" kind="unwind" identifier="unwindClock" unwindAction="unwindToClock:" id="crh-IA-KVm"/>
                     </connections>
                 </viewController>

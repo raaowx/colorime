@@ -11,11 +11,13 @@ import UIKit
 class SettingsViewController: UIViewController {
   @IBOutlet weak var timeHexFormatV: UIView!
   @IBOutlet weak var timeHexS: UISwitch!
+  @IBOutlet weak var timeHexTipL: UILabel!
   @IBOutlet weak var dateShowV: UIView!
   @IBOutlet weak var dateShowS: UISwitch!
   @IBOutlet weak var dateHexFormatSV: UIStackView!
   @IBOutlet weak var dateHexFormatV: UIView!
   @IBOutlet weak var dateHexFormatS: UISwitch!
+  @IBOutlet weak var dateHexTipL: UILabel!
   @IBOutlet weak var screenKeepActiveV: UIView!
   @IBOutlet weak var screenKeepActiveS: UISwitch!
   @IBOutlet weak var screenColorsV: UIView!
@@ -40,6 +42,10 @@ class SettingsViewController: UIViewController {
       screenKeepActiveV.layer.borderColor = borderColor
       screenColorsV.layer.borderWidth = 1
       screenColorsV.layer.borderColor = borderColor
+    }
+    if UIDevice.current.localizedModel == Settings.Devices.ipad.rawValue {
+      timeHexTipL.font = UIFont(name: Settings.Fonts.orbitronlight.rawValue, size: 14.0)
+      dateHexTipL.font = UIFont(name: Settings.Fonts.orbitronlight.rawValue, size: 14.0)
     }
     timeHexS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
     dateShowS.addTarget(self, action: #selector(switchValueChanged(which:)), for: .valueChanged)
