@@ -40,12 +40,27 @@ class ClockViewController: UIViewController {
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(orientationDidChange),
+      name: UIDevice.orientationDidChangeNotification,
+      object: nil)
     presenter?.startClock()
   }
 
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
     presenter?.stopClock()
+    NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
+  }
+
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    super.traitCollectionDidChange(previousTraitCollection)
+    adjustClockSize()
+  }
+
+  @objc func orientationDidChange() {
+    adjustClockSize()
   }
 
   @IBAction func screenTapped(_ sender: Any) {
@@ -77,6 +92,27 @@ class ClockViewController: UIViewController {
   @IBAction func unwindToClock(_ unwindSegue: UIStoryboardSegue) {
     presenter?.configureView()
     presenter?.startClock()
+  }
+}
+
+// MARK: - Private Functions
+extension ClockViewController {
+  private func adjustClockSize() {
+    if UIDevice.current.localizedModel == Settings.Devices.ipad.rawValue {
+      switch traitCollection.horizontalSizeClass {
+      case .regular:
+        dateL.font = UIFont(name: Settings.Fonts.orbitronlight.rawValue, size: 80.0)
+        timeL.font = UIFont(name: Settings.Fonts.orbitronlight.rawValue, size: 80.0)
+      default:
+        if UIDevice.current.orientation.isPortrait {
+          dateL.font = UIFont(name: Settings.Fonts.orbitronlight.rawValue, size: 40.0)
+          timeL.font = UIFont(name: Settings.Fonts.orbitronlight.rawValue, size: 40.0)
+          return
+        }
+        dateL.font = UIFont(name: Settings.Fonts.orbitronlight.rawValue, size: 50.0)
+        timeL.font = UIFont(name: Settings.Fonts.orbitronlight.rawValue, size: 50.0)
+      }
+    }
   }
 }
 
