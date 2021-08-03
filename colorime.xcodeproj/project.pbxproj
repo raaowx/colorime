@@ -242,7 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59D0BE26253E9E0D00597572 /* Build configuration list for PBXNativeTarget "colorime" */;
 			buildPhases = (
-				5947C9F3255306EF0043B474 /* ShellScript */,
+				5947C9F3255306EF0043B474 /* Lint Code */,
 				59D0BDF8253E9E0B00597572 /* Sources */,
 				59D0BDF9253E9E0B00597572 /* Frameworks */,
 				59D0BDFA253E9E0B00597572 /* Resources */,
@@ -378,7 +378,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5947C9F3255306EF0043B474 /* ShellScript */ = {
+		5947C9F3255306EF0043B474 /* Lint Code */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,13 +387,14 @@
 			);
 			inputPaths = (
 			);
+			name = "Lint Code";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif ! which swiftlint &> /dev/null; then\n  echo \"warning: Swiftlint is not installed. Visit https://github.com/realm/SwiftLint for more information.\"\n  exit 1\nfi\nRULES=\"$HOME/.lint/com.raywenderlich.swiftlint.yml\"\nif [ ! -f $RULES]; then\n  echo \"warning: You don't have any lint configuration. Visit https://github.com/raywenderlich/swift-style-guide for more information.\"\n  exit 1\nfi\nswiftlint --no-cache --config \"$RULES\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif ! which swiftlint &> /dev/null; then\n  echo \"warning: Swiftlint is not installed. Visit https://github.com/realm/SwiftLint for more information.\"\n  exit 1\nfi\nRULES=\"${PROJECT_DIR}/swiftlint-rules.yml\"\nif [ ! -f $RULES]; then\n  echo \"warning: You don't have any lint configuration. Visit https://github.com/raywenderlich/swift-style-guide for more information.\"\n  exit 1\nfi\nswiftlint --no-cache --config \"$RULES\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
