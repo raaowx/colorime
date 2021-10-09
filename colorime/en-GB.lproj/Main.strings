@@ -1,6 +1,8 @@
-
 /* Class = "UILabel"; text = "Screen"; ObjectID = "3L2-qf-p36"; */
 "3L2-qf-p36.text" = "Screen";
+
+/* Class = "UIBarButtonItem"; title = "Close"; ObjectID = "5fM-u6-Ttv"; */
+"5fM-u6-Ttv.title" = "Close";
 
 /* Class = "UISegmentedControl"; CgE-GK-fGE.segmentTitles[0] = "Normal"; ObjectID = "CgE-GK-fGE"; */
 "CgE-GK-fGE.segmentTitles[0]" = "Normal";
@@ -17,14 +19,20 @@
 /* Class = "UILabel"; text = "Hex format"; ObjectID = "L2p-Qb-4QS"; */
 "L2p-Qb-4QS.text" = "Hex format";
 
+/* Class = "UILabel"; text = "License"; ObjectID = "NGM-Ve-cp1"; */
+"NGM-Ve-cp1.text" = "License";
+
 /* Class = "UINavigationItem"; title = "Settings"; ObjectID = "NJI-2U-hyL"; */
 "NJI-2U-hyL.title" = "Settings";
 
 /* Class = "UILabel"; text = "Hex format"; ObjectID = "P0l-Sa-O7F"; */
 "P0l-Sa-O7F.text" = "Hex format";
 
-/* Class = "UILabel"; text = "Date in main screen will be shown as #150720 instead of 15/07/20"; ObjectID = "Yrj-7v-1Qu"; */
+/* Class = "UILabel"; text = "Date on main screen will be shown as #071520 instead of 07/15/20."; ObjectID = "Yrj-7v-1Qu"; */
 "Yrj-7v-1Qu.text" = "Date on main screen will be shown as #150720 instead of 15/07/20.";
+
+/* Class = "UILabel"; text = "Attributions"; ObjectID = "aDD-A8-HJd"; */
+"aDD-A8-HJd.text" = "Attributions";
 
 /* Class = "UILabel"; text = "Time"; ObjectID = "cYp-LZ-i2A"; */
 "cYp-LZ-i2A.text" = "Time";
@@ -32,7 +40,16 @@
 /* Class = "UILabel"; text = "Date"; ObjectID = "efk-F9-3j7"; */
 "efk-F9-3j7.text" = "Date";
 
-/* Class = "UILabel"; text = "Time in main screen will be shown as #123456 instead of 12:34:56"; ObjectID = "reV-Eh-g6k"; */
+/* Class = "UILabel"; text = "Version"; ObjectID = "f6g-cs-sMa"; */
+"f6g-cs-sMa.text" = "Version";
+
+/* Class = "UILabel"; text = "Source Code"; ObjectID = "fGH-Ah-veR"; */
+"fGH-Ah-veR.text" = "Source Code";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "mPf-6h-hBE"; */
+"mPf-6h-hBE.text" = "About";
+
+/* Class = "UILabel"; text = "Time on main screen will be shown as #123456 instead of 12:34:56."; ObjectID = "reV-Eh-g6k"; */
 "reV-Eh-g6k.text" = "Time on main screen will be shown as #123456 instead of 12:34:56.";
 
 /* Class = "UILabel"; text = "Colors"; ObjectID = "tAs-OS-4UE"; */
@@ -43,3 +60,6 @@
 
 /* Class = "UIBarButtonItem"; title = "Close"; ObjectID = "zMA-nV-FAw"; */
 "zMA-nV-FAw.title" = "Close";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "zcp-TI-vpy"; */
+"zcp-TI-vpy.title" = "About";

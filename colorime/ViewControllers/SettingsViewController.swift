@@ -22,6 +22,14 @@ class SettingsViewController: UIViewController {
   @IBOutlet weak var screenKeepActiveS: UISwitch!
   @IBOutlet weak var screenColorsV: UIView!
   @IBOutlet weak var screenColorsSC: UISegmentedControl!
+  @IBOutlet weak var versionV: UIView!
+  @IBOutlet weak var versionL: UILabel!
+  @IBOutlet weak var sourceCodeV: UIView!
+  @IBOutlet var sourceCodeTGR: UITapGestureRecognizer!
+  @IBOutlet weak var licenseV: UIView!
+  @IBOutlet var licenseTGR: UITapGestureRecognizer!
+  @IBOutlet weak var attributionsV: UIView!
+  @IBOutlet var attributionsTGR: UITapGestureRecognizer!
   var presenter: SettingsPresenter?
 
   override func viewDidLoad() {
@@ -31,6 +39,10 @@ class SettingsViewController: UIViewController {
     dateHexFormatV.layer.cornerRadius = 10
     screenKeepActiveV.layer.cornerRadius = 10
     screenColorsV.layer.cornerRadius = 10
+    versionV.layer.cornerRadius = 10
+    sourceCodeV.layer.cornerRadius = 10
+    licenseV.layer.cornerRadius = 10
+    attributionsV.layer.cornerRadius = 10
     if let borderColor = UIColor(hex: "#3C3C431E")?.cgColor {
       timeHexFormatV.layer.borderWidth = 1
       timeHexFormatV.layer.borderColor = borderColor
@@ -42,6 +54,14 @@ class SettingsViewController: UIViewController {
       screenKeepActiveV.layer.borderColor = borderColor
       screenColorsV.layer.borderWidth = 1
       screenColorsV.layer.borderColor = borderColor
+      versionV.layer.borderWidth = 1
+      versionV.layer.borderColor = borderColor
+      sourceCodeV.layer.borderWidth = 1
+      sourceCodeV.layer.borderColor = borderColor
+      licenseV.layer.borderWidth = 1
+      licenseV.layer.borderColor = borderColor
+      attributionsV.layer.borderWidth = 1
+      attributionsV.layer.borderColor = borderColor
     }
     if UIDevice.current.localizedModel == Settings.Devices.ipad.rawValue {
       timeHexTipL.font = UIFont(name: Settings.Fonts.orbitronlight.rawValue, size: 14.0)
@@ -77,10 +97,40 @@ class SettingsViewController: UIViewController {
     }
   }
 
+  @IBAction func buttonTapped(_ sender: UITapGestureRecognizer) {
+    switch sender {
+    case sourceCodeTGR:
+      guard let url = About.sourcecode.url else { return }
+      if UIApplication.shared.canOpenURL(url) {
+        UIApplication.shared.open(url, options: [:])
+      }
+    case licenseTGR:
+      self.performSegue(withIdentifier: "segueLicense", sender: nil)
+    case attributionsTGR:
+      self.performSegue(withIdentifier: "segueAttributions", sender: nil)
+    default: break
+    }
+  }
+
   // MARK: Navigation: Segue & UnwindSegue
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if About.allCases.contains(where: { $0.segueID == segue.identifier }) {
+      guard let aboutVC = segue.destination as? AboutViewController else { return }
+      switch segue.identifier {
+      case About.license.segueID:
+        aboutVC.aboutWhat = .license
+      case About.attributions.segueID:
+        aboutVC.aboutWhat = .attributions
+      default: break
+      }
+    }
+  }
+
   @IBAction func segueBackToClock(_ sender: Any) {
     self.performSegue(withIdentifier: "unwindClock", sender: nil)
   }
+
+  @IBAction func unwindToSettings(_ unwindSegue: UIStoryboardSegue) { }
 }
 
 // MARK: - Settings Delegate
@@ -123,5 +173,9 @@ extension SettingsViewController: SettingsDelegate {
         screenColorsSC.selectedSegmentIndex = value
       }
     }
+  }
+
+  func loadVersion(_ version: String) {
+    self.versionL.text = version
   }
 }

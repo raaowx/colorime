@@ -21,7 +21,16 @@
 		59220EC22566E5C300F1C665 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59220EC02566E5C300F1C665 /* SettingsPresenter.swift */; };
 		593C8F6725CDF4A3005C18BB /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C8F6625CDF4A3005C18BB /* Array.swift */; };
 		593C8F6825CDF4A3005C18BB /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C8F6625CDF4A3005C18BB /* Array.swift */; };
+		59401F322710AF6600AA1A77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59401F342710AF6600AA1A77 /* Localizable.strings */; };
+		59479CBB270F637F00C87B97 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59479CBA270F637F00C87B97 /* AboutViewController.swift */; };
+		59479CBD270F63AD00C87B97 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59479CBC270F63AD00C87B97 /* AboutPresenter.swift */; };
+		59479CBE270F67CA00C87B97 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59479CBA270F637F00C87B97 /* AboutViewController.swift */; };
+		59479CC0270F68C300C87B97 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59479CBF270F68C300C87B97 /* About.swift */; };
+		59479CC1270F68C300C87B97 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59479CBF270F68C300C87B97 /* About.swift */; };
+		59479CC2270F6AD600C87B97 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59479CBC270F63AD00C87B97 /* AboutPresenter.swift */; };
 		594CC441255FF8BB00027EA1 /* ClockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594CC440255FF8BB00027EA1 /* ClockPresenter.swift */; };
+		595C2A812710C46900306F43 /* attributions.html in Resources */ = {isa = PBXBuildFile; fileRef = 59436D62270F733C0089EA5B /* attributions.html */; };
+		595C2A822710C46900306F43 /* license.html in Resources */ = {isa = PBXBuildFile; fileRef = 59436D63270F733C0089EA5B /* license.html */; };
 		59A4FBA02556D0000062F589 /* Orbitron Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */; };
 		59A4FBA12556D0000062F589 /* Orbitron Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */; };
 		59A4FBA22556D0000062F589 /* Orbitron Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */; };
@@ -73,6 +82,14 @@
 		59220EB92566E5A800F1C665 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		59220EC02566E5C300F1C665 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		593C8F6625CDF4A3005C18BB /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		59401F332710AF6600AA1A77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		59401F352710AF6800AA1A77 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		59401F362710AF6C00AA1A77 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		59436D62270F733C0089EA5B /* attributions.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = attributions.html; sourceTree = "<group>"; };
+		59436D63270F733C0089EA5B /* license.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = license.html; sourceTree = "<group>"; };
+		59479CBA270F637F00C87B97 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		59479CBC270F63AD00C87B97 /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
+		59479CBF270F68C300C87B97 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		5947CAB4255310CD0043B474 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		594CC440255FF8BB00027EA1 /* ClockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockPresenter.swift; sourceTree = "<group>"; };
 		59A4FB9C2556D0000062F589 /* Orbitron Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Orbitron Medium.ttf"; sourceTree = "<group>"; };
@@ -131,9 +148,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		59479CC3270F6EEE00C87B97 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				59436D62270F733C0089EA5B /* attributions.html */,
+				59436D63270F733C0089EA5B /* license.html */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		5991408425531AC6008D9B6D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				59479CBF270F68C300C87B97 /* About.swift */,
 				59A4FBD3255C4C240062F589 /* Settings.swift */,
 			);
 			path = Models;
@@ -142,6 +169,7 @@
 		5991408525531ACE008D9B6D /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				59479CBC270F63AD00C87B97 /* AboutPresenter.swift */,
 				594CC440255FF8BB00027EA1 /* ClockPresenter.swift */,
 				59220EC02566E5C300F1C665 /* SettingsPresenter.swift */,
 			);
@@ -151,6 +179,7 @@
 		5991408625531AE1008D9B6D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				59479CBA270F637F00C87B97 /* AboutViewController.swift */,
 				59D0BE03253E9E0B00597572 /* ClockViewController.swift */,
 				59220EB92566E5A800F1C665 /* SettingsViewController.swift */,
 			);
@@ -171,9 +200,9 @@
 		59A4FBB5255995860062F589 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				593C8F6625CDF4A3005C18BB /* Array.swift */,
 				59A4FBBC255995BD0062F589 /* Date.swift */,
 				59A4FBC6255997B60062F589 /* UIColor.swift */,
-				593C8F6625CDF4A3005C18BB /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,6 +236,8 @@
 				59D0BE08253E9E0D00597572 /* Assets.xcassets */,
 				59D0BE0A253E9E0D00597572 /* LaunchScreen.storyboard */,
 				59D0BE05253E9E0B00597572 /* Main.storyboard */,
+				59401F342710AF6600AA1A77 /* Localizable.strings */,
+				59479CC3270F6EEE00C87B97 /* About */,
 				59A4FBB5255995860062F589 /* Extensions */,
 				59A4FB882556CF3C0062F589 /* Fonts */,
 				5991408425531AC6008D9B6D /* Models */,
@@ -341,10 +372,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				595C2A812710C46900306F43 /* attributions.html in Resources */,
+				595C2A822710C46900306F43 /* license.html in Resources */,
 				59D0BE0C253E9E0D00597572 /* LaunchScreen.storyboard in Resources */,
 				59A4FBA92556D0000062F589 /* Orbitron Black.ttf in Resources */,
 				59A4FBA02556D0000062F589 /* Orbitron Medium.ttf in Resources */,
 				59A4FBA62556D0000062F589 /* Orbitron Light.ttf in Resources */,
+				59401F322710AF6600AA1A77 /* Localizable.strings in Resources */,
 				59D0BE09253E9E0D00597572 /* Assets.xcassets in Resources */,
 				59D0BE07253E9E0B00597572 /* Main.storyboard in Resources */,
 				59A4FBA32556D0000062F589 /* Orbitron Bold.ttf in Resources */,
@@ -409,11 +443,14 @@
 				59D0BE02253E9E0B00597572 /* SceneDelegate.swift in Sources */,
 				59A4FBBD255995BD0062F589 /* Date.swift in Sources */,
 				59220EC12566E5C300F1C665 /* SettingsPresenter.swift in Sources */,
+				59479CBB270F637F00C87B97 /* AboutViewController.swift in Sources */,
 				593C8F6725CDF4A3005C18BB /* Array.swift in Sources */,
 				59A4FBC7255997B60062F589 /* UIColor.swift in Sources */,
+				59479CC0270F68C300C87B97 /* About.swift in Sources */,
 				594CC441255FF8BB00027EA1 /* ClockPresenter.swift in Sources */,
 				591AE01C25B0D0F90037694A /* UIGradientView.swift in Sources */,
 				59220EBA2566E5A800F1C665 /* SettingsViewController.swift in Sources */,
+				59479CBD270F63AD00C87B97 /* AboutPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,14 +461,17 @@
 				59D0BE17253E9E0D00597572 /* colorimeTests.swift in Sources */,
 				591AE01D25B0D0F90037694A /* UIGradientView.swift in Sources */,
 				59A4FBC8255997B60062F589 /* UIColor.swift in Sources */,
+				59479CC2270F6AD600C87B97 /* AboutPresenter.swift in Sources */,
 				590D2B4426692D6E008D86E5 /* ClockViewController.swift in Sources */,
 				590D2B4026692D42008D86E5 /* AppDelegate.swift in Sources */,
 				59A4FBD5255C4C240062F589 /* Settings.swift in Sources */,
 				590D2B4126692D45008D86E5 /* SceneDelegate.swift in Sources */,
 				59220EBB2566E5A900F1C665 /* SettingsViewController.swift in Sources */,
 				593C8F6825CDF4A3005C18BB /* Array.swift in Sources */,
+				59479CC1270F68C300C87B97 /* About.swift in Sources */,
 				59A4FBBE255995BD0062F589 /* Date.swift in Sources */,
 				59220EC22566E5C300F1C665 /* SettingsPresenter.swift in Sources */,
+				59479CBE270F67CA00C87B97 /* AboutViewController.swift in Sources */,
 				590D2B4326692D67008D86E5 /* ClockPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +500,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		59401F342710AF6600AA1A77 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59401F332710AF6600AA1A77 /* en */,
+				59401F352710AF6800AA1A77 /* en-GB */,
+				59401F362710AF6C00AA1A77 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		59D0BE05253E9E0B00597572 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -613,6 +663,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.raaowx.colorime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -632,6 +683,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.raaowx.colorime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
